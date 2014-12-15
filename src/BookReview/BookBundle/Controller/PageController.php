@@ -10,6 +10,13 @@ class PageController extends Controller
     {
         return $this->render('BookReviewBookBundle:Page:index.html.twig', array(
                 // ...
-            ));    }
+            ));
+    }
+
+    public function aboutAction()
+    {
+        return $this->render('BookReviewBookBundle:Page:about.html.twig', array(// ...
+        ));
+    }
 
 }

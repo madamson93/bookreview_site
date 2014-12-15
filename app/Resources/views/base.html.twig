@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{% block title %}Symblog{% endblock %} - Symblog</title>
+    <title>{% block title %}Home{% endblock %} - Book Reviews</title>
     {% block stylesheets %}
-        {% stylesheets 'https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css' '../app/Resources/public/css/main.css' %}
+        {% stylesheets 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css' '../app/Resources/public/css/main.css' %}
         <link href="{{ asset_url }}" type="text/css" rel="stylesheet"/>
         {% endstylesheets %}
     {% endblock %}
     {% block javascript %}
-        {% javascripts 'https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js'
+        {% javascripts 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js'
         %}
         <script type="text/javascript" src="{{ asset_url }}"></script>
         {% endjavascripts %}
@@ -18,7 +18,7 @@
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}"/> </head>
 <body>
 <div class="container">
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container-fluid">
             <button type="button" class="navbar-toggle collapsed"
                     data-toggle="collapse"
@@ -28,12 +28,11 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Symblog</a>
+            <a class="navbar-brand" href="#">Book Reviews</a>
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="{{ path('index') }}">Home</a></li>
+                    <li><a href="{{ path('bookreview_about') }}">About</a></li>
                 </ul> </div>
         </div>
     </nav>
@@ -45,11 +44,11 @@
             {% block sidebar %}{% endblock %}
         </section>
     </div>
-    <div class="footer">
-        {% block footer %}
-            <p>FOOTER</p>
-        {% endblock %}
-    </div>
+    {#<div class="footer">#}
+        {#{% block footer %}#}
+            {#<p>FOOTER</p>#}
+        {#{% endblock %}#}
+    {#</div>#}
 </div>
 </body>
 </html>

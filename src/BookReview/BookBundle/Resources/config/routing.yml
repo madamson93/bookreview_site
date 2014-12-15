@@ -2,3 +2,15 @@
 index:
     path:     /
     defaults: { _controller: BookReviewBookBundle:Page:index }
+
+bookreview_about:
+    pattern: /about
+    defaults: { _controller: BookReviewBookBundle:Page:about }
+    requirements:
+        _method: GET
+
+bookreview_contact:
+    pattern: /contact
+    defaults: { _controller: BookReviewBookBundle:Page:contact }
+    requirements:
+        _method: GET
