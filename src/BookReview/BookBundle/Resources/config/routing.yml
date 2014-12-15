@@ -1,0 +1,3 @@
+book_review_book_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: BookReviewBookBundle:Default:index }
