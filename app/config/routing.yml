@@ -1,3 +1,7 @@
+book_review_user:
+    resource: "@BookReviewUserBundle/Resources/config/routing.yml"
+    prefix:   /
+
 BookReviewBookBundle:
     resource: "@BookReviewBookBundle/Resources/config/routing.yml"
     prefix:   /
