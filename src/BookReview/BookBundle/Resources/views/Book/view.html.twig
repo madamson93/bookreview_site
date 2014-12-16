@@ -3,6 +3,15 @@
 {% block title %}View all books{% endblock %}
 
 {% block body %}
-<h1>Books List</h1>
-<p>This is the view book page, where you can see all the books available to review</p>
+    <h1>Books List</h1>
+    <p>This is the view book page, where you can see all the books available to review</p>
+
+    <div>
+        {% for book in books %}
+            <h2>{{ book.title }}</h2>
+            <span>Author: {{ book.author }}</span>
+            <span>Genre: {{ book.genre }}</span>
+            <span>Year of Publication: {{ book.yearofpublication }}</span>
+        {% endfor %}
+    </div>
 {% endblock %}

@@ -50,9 +50,9 @@ class Book
     private $publisher;
 
     /**
-     * @var integer
+     * @var string
      *
-     * @ORM\Column(name="year of publication", type="integer")
+     * @ORM\Column(name="yearofpublication", type="string", length=255)
      */
     private $yearOfPublication;
 
