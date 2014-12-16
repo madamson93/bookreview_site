@@ -28,19 +28,43 @@
       <file leaf-file-name="routing.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/BookReview/BookBundle/Resources/config/routing.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="86" max-vertical-offset="798">
-              <caret line="17" column="22" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="840">
+              <caret line="21" column="15" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="15" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BookController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BookController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/BookReview/BookBundle/Controller/BookController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.08567416" vertical-offset="107" max-vertical-offset="819">
-              <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="21" max-vertical-offset="1386">
+              <caret line="17" column="40" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
+              <folding>
+                <element signature="e#52#90#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="security.yml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/config/security.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.8258427" vertical-offset="0" max-vertical-offset="1008">
+              <caret line="28" column="49" selection-start-line="28" selection-start-column="49" selection-end-line="28" selection-end-column="49" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="create.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/BookReview/BookBundle/Resources/views/Book/create.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
+              <caret line="5" column="35" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
+              <folding>
+                <element signature="e#12#50#0#Twig" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -62,7 +86,6 @@
         <option value="$PROJECT_DIR$/app/config/parameters.yml" />
         <option value="$PROJECT_DIR$/src/BookReview/UserBundle/Entity/User.php" />
         <option value="$PROJECT_DIR$/src/BookReview/UserBundle/Resources/config/doctrine/User.orm.yml" />
-        <option value="$PROJECT_DIR$/app/config/security.yml" />
         <option value="$PROJECT_DIR$/src/BookReview/BookBundle/Resources/views/Page/index.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/public/css/main.css" />
         <option value="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/layout.html.twig" />
@@ -70,12 +93,13 @@
         <option value="$PROJECT_DIR$/src/BookReview/BookBundle/Form/BookType.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
         <option value="$PROJECT_DIR$/src/BookReview/BookBundle/Resources/views/layout.html.twig" />
-        <option value="$PROJECT_DIR$/src/BookReview/BookBundle/Controller/BookController.php" />
         <option value="$PROJECT_DIR$/src/BookReview/BookBundle/Resources/views/Book/view.html.twig" />
-        <option value="$PROJECT_DIR$/src/BookReview/BookBundle/Resources/views/Book/create.html.twig" />
         <option value="$PROJECT_DIR$/src/BookReview/BookBundle/Resources/views/Book/edit.html.twig" />
         <option value="$PROJECT_DIR$/src/BookReview/BookBundle/Resources/views/Book/delete.html.twig" />
+        <option value="$PROJECT_DIR$/src/BookReview/BookBundle/Resources/views/Book/create.html.twig" />
         <option value="$PROJECT_DIR$/src/BookReview/BookBundle/Resources/config/routing.yml" />
+        <option value="$PROJECT_DIR$/src/BookReview/BookBundle/Controller/BookController.php" />
+        <option value="$PROJECT_DIR$/app/config/security.yml" />
       </list>
     </option>
   </component>
@@ -141,7 +165,7 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="SearchEverywhereHistoryKey" value="routi&#9;FILE&#9;file:///Volumes/Macintosh HD/Users/moniqueadamson/Documents/Uni:Industry Year/AdvWD/bookreviews/src/BookReview/BookBundle/Resources/config/routing.yml&#10;del&#9;FILE&#9;file:///Volumes/Macintosh HD/Users/moniqueadamson/Documents/Uni:Industry Year/AdvWD/bookreviews/src/BookReview/BookBundle/Resources/views/Book/delete.html.twig&#10;edit&#9;FILE&#9;file:///Volumes/Macintosh HD/Users/moniqueadamson/Documents/Uni:Industry Year/AdvWD/bookreviews/src/BookReview/BookBundle/Resources/views/Book/edit.html.twig&#10;cre&#9;FILE&#9;file:///Volumes/Macintosh HD/Users/moniqueadamson/Documents/Uni:Industry Year/AdvWD/bookreviews/src/BookReview/BookBundle/Resources/views/Book/create.html.twig&#10;page&#9;FILE&#9;file:///Volumes/Macintosh HD/Users/moniqueadamson/Documents/Uni:Industry Year/AdvWD/bookreviews/src/BookReview/BookBundle/Controller/PageController.php&#10;layout&#9;FILE&#9;file:///Volumes/Macintosh HD/Users/moniqueadamson/Documents/Uni:Industry Year/AdvWD/bookreviews/src/BookReview/BookBundle/Resources/views/layout.html.twig&#10;sidebar&#9;null&#9;null&#10;view&#9;FILE&#9;file:///Volumes/Macintosh HD/Users/moniqueadamson/Documents/Uni:Industry Year/AdvWD/bookreviews/src/BookReview/BookBundle/Resources/views/Book/view.html.twig&#10;crea&#9;FILE&#9;file:///Volumes/Macintosh HD/Users/moniqueadamson/Documents/Uni:Industry Year/AdvWD/bookreviews/src/BookReview/BookBundle/Resources/views/Book/create.html.twig&#10;edit.&#9;FILE&#9;file:///Volumes/Macintosh HD/Users/moniqueadamson/Documents/Uni:Industry Year/AdvWD/bookreviews/src/BookReview/BookBundle/Resources/views/Book/edit.html.twig&#10;main&#9;FILE&#9;file:///Volumes/Macintosh HD/Users/moniqueadamson/Documents/Uni:Industry Year/AdvWD/bookreviews/app/Resources/public/css/main.css&#10;base&#9;FILE&#9;file:///Volumes/Macintosh HD/Users/moniqueadamson/Documents/Uni:Industry Year/AdvWD/bookreviews/app/Resources/views/base.html.twig&#10;routing.yml&#9;FILE&#9;file:///Volumes/Macintosh HD/Users/moniqueadamson/Documents/Uni:Industry Year/AdvWD/bookreviews/src/BookReview/BookBundle/Resources/config/routing.yml&#10;book&#9;null&#9;null&#10;bookrep&#9;null&#9;null&#10;layout.&#9;FILE&#9;file:///Volumes/Macintosh HD/Users/moniqueadamson/Documents/Uni:Industry Year/AdvWD/bookreviews/src/BookReview/BookBundle/Resources/views/layout.html.twig&#10;secur&#9;FILE&#9;file:///Volumes/Macintosh HD/Users/moniqueadamson/Documents/Uni:Industry Year/AdvWD/bookreviews/app/config/security.yml&#10;para&#9;FILE&#9;file:///Volumes/Macintosh HD/Users/moniqueadamson/Documents/Uni:Industry Year/AdvWD/bookreviews/app/config/parameters.yml&#10;config.yml&#9;FILE&#9;file:///Volumes/Macintosh HD/Users/moniqueadamson/Documents/Uni:Industry Year/AdvWD/bookreviews/app/config/config.yml&#10;security.yml&#9;FILE&#9;file:///Volumes/Macintosh HD/Users/moniqueadamson/Documents/Uni:Industry Year/AdvWD/bookreviews/app/config/security.yml&#10;AppKer&#9;FILE&#9;file:///Volumes/Macintosh HD/Users/moniqueadamson/Documents/Uni:Industry Year/AdvWD/bookreviews/app/AppKernel.php&#10;config.&#9;FILE&#9;file:///Volumes/Macintosh HD/Users/moniqueadamson/Documents/Uni:Industry Year/AdvWD/bookreviews/app/config/config.yml&#10;lay&#9;FILE&#9;file:///Volumes/Macintosh HD/Users/moniqueadamson/Documents/Uni:Industry Year/AdvWD/bookreviews/src/BookReview/BookBundle/Resources/views/layout.html.twig&#10;about&#9;FILE&#9;file:///Volumes/Macintosh HD/Users/moniqueadamson/Documents/Uni:Industry Year/AdvWD/bookreviews/src/BookReview/BookBundle/Resources/views/Page/about.html.twig&#10;abi&#9;null&#9;null&#10;pageco&#9;FILE&#9;file:///Volumes/Macintosh HD/Users/moniqueadamson/Documents/Uni:Industry Year/AdvWD/bookreviews/src/BookReview/BookBundle/Controller/PageController.php&#10;index&#9;FILE&#9;file:///Volumes/Macintosh HD/Users/moniqueadamson/Documents/Uni:Industry Year/AdvWD/bookreviews/src/BookReview/BookBundle/Resources/views/Page/index.html.twig&#10;contact&#9;FILE&#9;file:///Volumes/Macintosh HD/Users/moniqueadamson/Documents/Uni:Industry Year/AdvWD/bookreviews/src/BookReview/BookBundle/Resources/views/Page/contact.html.twig&#10;base.html&#9;FILE&#9;file:///Volumes/Macintosh HD/Users/moniqueadamson/Documents/Uni:Industry Year/AdvWD/bookreviews/app/Resources/views/base.html.twig&#10;routing&#9;FILE&#9;file:///Volumes/Macintosh HD/Users/moniqueadamson/Documents/Uni:Industry Year/AdvWD/bookreviews/src/BookReview/BookBundle/Resources/config/routing.yml&#10;screen&#9;FILE&#9;file:///Volumes/Macintosh HD/Users/moniqueadamson/Documents/Uni:Industry Year/AdvWD/bookreviews/app/Resources/views/css/screen.css" />
+    <property name="SearchEverywhereHistoryKey" value="secu&#9;FILE&#9;file:///Volumes/Macintosh HD/Users/moniqueadamson/Documents/Uni:Industry Year/AdvWD/bookreviews/app/config/security.yml&#10;cre&#9;FILE&#9;file:///Volumes/Macintosh HD/Users/moniqueadamson/Documents/Uni:Industry Year/AdvWD/bookreviews/src/BookReview/BookBundle/Resources/views/Book/create.html.twig&#10;routi&#9;FILE&#9;file:///Volumes/Macintosh HD/Users/moniqueadamson/Documents/Uni:Industry Year/AdvWD/bookreviews/src/BookReview/BookBundle/Resources/config/routing.yml&#10;del&#9;FILE&#9;file:///Volumes/Macintosh HD/Users/moniqueadamson/Documents/Uni:Industry Year/AdvWD/bookreviews/src/BookReview/BookBundle/Resources/views/Book/delete.html.twig&#10;edit&#9;FILE&#9;file:///Volumes/Macintosh HD/Users/moniqueadamson/Documents/Uni:Industry Year/AdvWD/bookreviews/src/BookReview/BookBundle/Resources/views/Book/edit.html.twig&#10;page&#9;FILE&#9;file:///Volumes/Macintosh HD/Users/moniqueadamson/Documents/Uni:Industry Year/AdvWD/bookreviews/src/BookReview/BookBundle/Controller/PageController.php&#10;layout&#9;FILE&#9;file:///Volumes/Macintosh HD/Users/moniqueadamson/Documents/Uni:Industry Year/AdvWD/bookreviews/src/BookReview/BookBundle/Resources/views/layout.html.twig&#10;sidebar&#9;null&#9;null&#10;view&#9;FILE&#9;file:///Volumes/Macintosh HD/Users/moniqueadamson/Documents/Uni:Industry Year/AdvWD/bookreviews/src/BookReview/BookBundle/Resources/views/Book/view.html.twig&#10;crea&#9;FILE&#9;file:///Volumes/Macintosh HD/Users/moniqueadamson/Documents/Uni:Industry Year/AdvWD/bookreviews/src/BookReview/BookBundle/Resources/views/Book/create.html.twig&#10;edit.&#9;FILE&#9;file:///Volumes/Macintosh HD/Users/moniqueadamson/Documents/Uni:Industry Year/AdvWD/bookreviews/src/BookReview/BookBundle/Resources/views/Book/edit.html.twig&#10;main&#9;FILE&#9;file:///Volumes/Macintosh HD/Users/moniqueadamson/Documents/Uni:Industry Year/AdvWD/bookreviews/app/Resources/public/css/main.css&#10;base&#9;FILE&#9;file:///Volumes/Macintosh HD/Users/moniqueadamson/Documents/Uni:Industry Year/AdvWD/bookreviews/app/Resources/views/base.html.twig&#10;routing.yml&#9;FILE&#9;file:///Volumes/Macintosh HD/Users/moniqueadamson/Documents/Uni:Industry Year/AdvWD/bookreviews/src/BookReview/BookBundle/Resources/config/routing.yml&#10;book&#9;null&#9;null&#10;bookrep&#9;null&#9;null&#10;layout.&#9;FILE&#9;file:///Volumes/Macintosh HD/Users/moniqueadamson/Documents/Uni:Industry Year/AdvWD/bookreviews/src/BookReview/BookBundle/Resources/views/layout.html.twig&#10;secur&#9;FILE&#9;file:///Volumes/Macintosh HD/Users/moniqueadamson/Documents/Uni:Industry Year/AdvWD/bookreviews/app/config/security.yml&#10;para&#9;FILE&#9;file:///Volumes/Macintosh HD/Users/moniqueadamson/Documents/Uni:Industry Year/AdvWD/bookreviews/app/config/parameters.yml&#10;config.yml&#9;FILE&#9;file:///Volumes/Macintosh HD/Users/moniqueadamson/Documents/Uni:Industry Year/AdvWD/bookreviews/app/config/config.yml&#10;security.yml&#9;FILE&#9;file:///Volumes/Macintosh HD/Users/moniqueadamson/Documents/Uni:Industry Year/AdvWD/bookreviews/app/config/security.yml&#10;AppKer&#9;FILE&#9;file:///Volumes/Macintosh HD/Users/moniqueadamson/Documents/Uni:Industry Year/AdvWD/bookreviews/app/AppKernel.php&#10;config.&#9;FILE&#9;file:///Volumes/Macintosh HD/Users/moniqueadamson/Documents/Uni:Industry Year/AdvWD/bookreviews/app/config/config.yml&#10;lay&#9;FILE&#9;file:///Volumes/Macintosh HD/Users/moniqueadamson/Documents/Uni:Industry Year/AdvWD/bookreviews/src/BookReview/BookBundle/Resources/views/layout.html.twig&#10;about&#9;FILE&#9;file:///Volumes/Macintosh HD/Users/moniqueadamson/Documents/Uni:Industry Year/AdvWD/bookreviews/src/BookReview/BookBundle/Resources/views/Page/about.html.twig&#10;abi&#9;null&#9;null&#10;pageco&#9;FILE&#9;file:///Volumes/Macintosh HD/Users/moniqueadamson/Documents/Uni:Industry Year/AdvWD/bookreviews/src/BookReview/BookBundle/Controller/PageController.php&#10;index&#9;FILE&#9;file:///Volumes/Macintosh HD/Users/moniqueadamson/Documents/Uni:Industry Year/AdvWD/bookreviews/src/BookReview/BookBundle/Resources/views/Page/index.html.twig&#10;contact&#9;FILE&#9;file:///Volumes/Macintosh HD/Users/moniqueadamson/Documents/Uni:Industry Year/AdvWD/bookreviews/src/BookReview/BookBundle/Resources/views/Page/contact.html.twig&#10;base.html&#9;FILE&#9;file:///Volumes/Macintosh HD/Users/moniqueadamson/Documents/Uni:Industry Year/AdvWD/bookreviews/app/Resources/views/base.html.twig&#10;routing&#9;FILE&#9;file:///Volumes/Macintosh HD/Users/moniqueadamson/Documents/Uni:Industry Year/AdvWD/bookreviews/src/BookReview/BookBundle/Resources/config/routing.yml&#10;screen&#9;FILE&#9;file:///Volumes/Macintosh HD/Users/moniqueadamson/Documents/Uni:Industry Year/AdvWD/bookreviews/app/Resources/views/css/screen.css" />
     <property name="FullScreen" value="false" />
   </component>
   <component name="RunManager">
@@ -487,13 +511,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/security.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4054054" vertical-offset="0" max-vertical-offset="675">
-          <caret line="10" column="53" selection-start-line="10" selection-start-column="53" selection-end-line="10" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Form/Type/RegistrationFormType.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="810">
@@ -580,16 +597,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/BookReview/BookBundle/Resources/views/Book/create.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1474719" vertical-offset="0" max-vertical-offset="712">
-          <caret line="5" column="30" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
-          <folding>
-            <element signature="e#12#50#0#Twig" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/BookReview/BookBundle/Resources/views/Book/edit.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.1474719" vertical-offset="0" max-vertical-offset="712">
@@ -628,16 +635,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/BookReview/BookBundle/Resources/config/routing.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="86" max-vertical-offset="798">
-          <caret line="17" column="22" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="840">
+          <caret line="21" column="15" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="15" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BookReview/BookBundle/Resources/views/Book/create.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
+          <caret line="5" column="35" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
+          <folding>
+            <element signature="e#12#50#0#Twig" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/BookReview/BookBundle/Controller/BookController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.08567416" vertical-offset="107" max-vertical-offset="819">
-          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="21" max-vertical-offset="1386">
+          <caret line="17" column="40" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
+          <folding>
+            <element signature="e#52#90#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/security.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8258427" vertical-offset="0" max-vertical-offset="1008">
+          <caret line="28" column="49" selection-start-line="28" selection-start-column="49" selection-end-line="28" selection-end-column="49" />
           <folding />
         </state>
       </provider>

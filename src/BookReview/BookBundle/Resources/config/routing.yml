@@ -18,6 +18,8 @@ bookreview_contact:
 bookreview_books_view:
     path:     /book/view
     defaults: { _controller: BookReviewBookBundle:Book:view }
+    requirements:
+        id: \d+
 
 bookreview_books_create:
     path:     /book/create

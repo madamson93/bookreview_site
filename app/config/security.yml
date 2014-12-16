@@ -24,6 +24,9 @@ security:
         - { path: ^/register, role: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/resetting, role: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/admin/, role: ROLE_ADMIN }
+        - { path: ^/book/create, role: ROLE_USER }
+        - { path: ^/book/edit, role: ROLE_USER }
+        - { path: ^/book/delete, role: ROLE_ADMIN }
 
 security:
     providers:
