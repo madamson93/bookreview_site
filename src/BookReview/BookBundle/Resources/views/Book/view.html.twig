@@ -8,7 +8,7 @@
 
     <div>
         {% for book in books %}
-            <h2>{{ book.title }}</h2>
+            <h2><a href="{{ path('bookreview_books_view',{ 'id': book.id }) }}">{{ book.title }}</a></h2>
             <span>Author: {{ book.author }}</span>
             <span>Genre: {{ book.genre }}</span>
             <span>Year of Publication: {{ book.yearofpublication }}</span>

@@ -16,26 +16,26 @@ bookreview_contact:
         _method: GET
 
 bookreview_books_view:
-    path:     /book/view/
+    path:     /books/view/{id}
     defaults: { _controller: BookReviewBookBundle:Book:view }
     requirements:
         _method: GET
-#        id: \d+
+        id: \d+
 
 bookreview_books_create:
-    path:     /book/create
+    path:     /books/create
     defaults: { _controller: BookReviewBookBundle:Book:create }
     requirements:
         id: \d+
 
 bookreview_books_edit:
-    path:     /book/edit
+    path:     /books/edit
     defaults: { _controller: BookReviewBookBundle:Book:edit }
     requirements:
         id: \d+
 
 bookreview_books_delete:
-    path:     /book/delete
+    path:     /books/delete
     defaults: { _controller: BookReviewBookBundle:Book:delete }
     requirements:
         id: \d+
