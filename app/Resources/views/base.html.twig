@@ -40,12 +40,12 @@
         </div>
     </nav>
     <div class="row">
+        <section class="col-md-3">
+            {% block sidebar %}{% endblock %}
+        </section>
         <section class="col-md-8">
             {% block body %}{% endblock %}
             {% block content %}{% endblock %}
-        </section>
-        <section class="col-md-4">
-            {% block sidebar %}{% endblock %}
         </section>
     </div>
     {#<div class="footer">#}

@@ -1,4 +1,8 @@
 {% extends '::base.html.twig' %}
 {% block sidebar %}
-    Sidebar content goes here
+    <h3>Site Navigation</h3>
+    <li><a href="{{ path('bookreview_books_view') }}">View books</a></li>
+    <li><a href="{{ path('bookreview_books_create') }}">Add a new book</a></li>
+    <li><a href="{{ path('bookreview_books_edit') }}">Edit an existing book</a></li>
+    <li><a href="{{ path('bookreview_books_delete') }}">Delete a book</a></li> {#admin only#}
 {% endblock %}
