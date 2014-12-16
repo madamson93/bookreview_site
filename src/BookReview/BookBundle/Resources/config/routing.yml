@@ -24,6 +24,8 @@ bookreview_books_view:
 bookreview_books_create:
     path:     /book/create
     defaults: { _controller: BookReviewBookBundle:Book:create }
+    requirements:
+        id: \d+
 
 bookreview_books_edit:
     path:     /book/edit
