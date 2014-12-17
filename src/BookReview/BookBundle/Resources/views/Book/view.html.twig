@@ -11,6 +11,6 @@
             <li>Publisher: {{ book.publisher }}</li>
             <li>Book Summary: {{ book.summary }}</li>
         </ul>
-        <a href="{{ path('bookreview_books_edit', {'id':book.id}) }}">edit</a>
+        <a href="{{ path('bookreview_books_edit',{id: book.id}) }}">edit</a>
     </div>
 {% endblock %}

@@ -1,7 +1,11 @@
-{% extends "::base.html.twig" %}
+{% extends "BookReviewBookBundle::layout.html.twig" %}
 
-{% block title %}BookReviewBookBundle:Book:edit{% endblock %}
+{% block title %}Edit a book{% endblock %}
 
 {% block body %}
-<h1>Welcome to the Book:edit page</h1>
+    <div>
+        <h1>Edit a book</h1>
+        {{ form(form) }}
+        <a href="{{ path('bookreview_books_delete',{id: book.id}) }}">delete</a>
+    </div>
 {% endblock %}

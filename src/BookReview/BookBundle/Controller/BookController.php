@@ -34,6 +34,10 @@ class BookController extends Controller
             $em = $this->getDoctrine()->getManager();
             $em->persist($book);
             $em->flush();
+
+            return $this->redirect($this->generateUrl('bookreview_books_view', array(
+                'id' => $book->getId()
+            )));
         }
 
         return $this->render('BookReviewBookBundle:Book:create.html.twig', array(
@@ -43,16 +47,34 @@ class BookController extends Controller
 
     public function editAction($id, Request $request)
     {
+        $em = $this->getDoctrine()->getManager();
+        $book = $em->getRepository('BookReviewBookBundle:Book')->find($id);
+        $form = $this->createForm(new BookType(), $book, array(
+           'action' => $request->getUri()
+        ));
+
+        $form->handleRequest($request);
+
+        if($form->isValid()){
+            $em->flush();
+            return $this->redirect($this->generateUrl('bookreview_books_view', array(
+                'id' => $book->getId()
+            )));
+        }
+
         return $this->render('BookReviewBookBundle:Book:edit.html.twig', array(
-                // ...
+            'form' => $form->createView(),
+            'book' => $book
         ));
     }
 
-    public function deleteAction()
+    public function deleteAction($id)
     {
-        return $this->render('BookReviewBookBundle:Book:delete.html.twig', array(
-                // ...
-        ));
+        $em = $this->getDoctrine()->getManager();
+        $book = $em->getRepository('BookReviewBookBundle:Book')->find($id);
+        $em->remove($book);
+        $em->flush();
+        return $this->redirect($this->generateUrl('index'));
     }
 
 }

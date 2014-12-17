@@ -1,4 +1,7 @@
 {% extends '::base.html.twig' %}
 {% block sidebar %}
     <h3>Site Navigation</h3>
+    <ul>
+        <li><a href="{{ path('bookreview_books_create') }}">Create new book</a></li>
+    </ul>
 {% endblock %}
