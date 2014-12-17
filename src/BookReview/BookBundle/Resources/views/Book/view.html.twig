@@ -1,7 +1,16 @@
-{% extends "::base.html.twig" %}
+{% extends "BookReviewBookBundle::layout.html.twig" %}
 
-{% block title %}BookReviewBookBundle:Book:view{% endblock %}
+{% block title %}View book{% endblock %}
 
 {% block body %}
-<h1>Welcome to the Book:view page</h1>
+    <div>
+        <h1>{{ book.title | title }}</h1>
+        <ul>
+            <li>Author: {{ book.author }}</li>
+            <li>Genre: {{ book.genre }}</li>
+            <li>Publisher: {{ book.publisher }}</li>
+            <li>Book Summary: {{ book.summary }}</li>
+        </ul>
+        <a href="{{ path('bookreview_books_edit', {'id':book.id}) }}">edit</a>
+    </div>
 {% endblock %}

@@ -9,10 +9,14 @@ use Symfony\Component\HttpFoundation\Request;
 
 class BookController extends Controller
 {
-    public function viewAction()
+    public function viewAction($id)
     {
+        $em = $this->getDoctrine()->getManager();
+
+        $book = $em->getRepository('BookReviewBookBundle:Book')->find($id);
+
         return $this->render('BookReviewBookBundle:Book:view.html.twig', array(
-                // ...
+                'book' => $book
         ));
     }
 
@@ -37,7 +41,7 @@ class BookController extends Controller
         ));
     }
 
-    public function editAction()
+    public function editAction($id, Request $request)
     {
         return $this->render('BookReviewBookBundle:Book:edit.html.twig', array(
                 // ...
