@@ -16,7 +16,17 @@ bookreview_contact:
         _method: GET
 
 bookreview_books_view:
-    path:     /books/view
+    path:     /view
     defaults: { _controller: BookReviewBookBundle:Book:view }
 
-#routes for edit, delete and create here
+bookreview_books_create:
+    path:     /create
+    defaults: { _controller: BookReviewBookBundle:Book:create }
+
+bookreview_books_edit:
+    path:     /edit
+    defaults: { _controller: BookReviewBookBundle:Book:edit }
+
+bookreview_books_delete:
+    path:     /delete
+    defaults: { _controller: BookReviewBookBundle:Book:delete }
