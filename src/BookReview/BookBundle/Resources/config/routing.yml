@@ -1,5 +1,5 @@
 
-index:
+bookreview_home:
     path:     /
     defaults: { _controller: BookReviewBookBundle:Page:index }
 
@@ -16,23 +16,23 @@ bookreview_contact:
         _method: GET
 
 bookreview_books_view:
-    path:     /view/{id}
+    path:     /books/view/{id}
     defaults: { _controller: BookReviewBookBundle:Book:view }
     requirements:
         id: \d+
 
 bookreview_books_create:
-    path:     /create
+    path:     /books/create
     defaults: { _controller: BookReviewBookBundle:Book:create }
 
 bookreview_books_edit:
-    path:     /edit/{id}
+    path:     /books/edit/{id}
     defaults: { _controller: BookReviewBookBundle:Book:edit }
     requirements:
         id: \d+
 
 bookreview_books_delete:
-    path:     /delete/{id}
+    path:     /books/delete/{id}
     defaults: { _controller: BookReviewBookBundle:Book:delete }
     requirements:
         id: \d+

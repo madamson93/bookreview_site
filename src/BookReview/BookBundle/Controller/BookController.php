@@ -74,7 +74,7 @@ class BookController extends Controller
         $book = $em->getRepository('BookReviewBookBundle:Book')->find($id);
         $em->remove($book);
         $em->flush();
-        return $this->redirect($this->generateUrl('index'));
+        return $this->redirect($this->generateUrl('bookreview_home'));
     }
 
 }
