@@ -1,8 +1,12 @@
 {% extends 'BookReviewBookBundle::layout.html.twig' %}
 {% block body %}
-    <h1>Book Review Home</h1>
-    <p>Welcome to the Book Review Website. Here you will be able to review books that are enlisted on this site.
-    You can add books to the site if not included already, however if you are a guest here you will only be able to view the reviews.</p>
-    <p>You can create an account <a href="{{ path('fos_user_registration_register') }}">here</a>.
-        Or click <a href="{{ path('fos_user_security_login') }}">here</a>, if you already are a member.</p>
+    {% for book in books %}
+        <h1>{{ book.title | title }}</h1>
+        <li>Author: {{ book.author }}</li>
+        <li>Genre: {{ book.genre }}</li>
+        <li>Publisher: {{ book.publisher }}</li>
+        <li>Year of Publication: {{ book.yearpublished }}</li>
+        {# link to edit book, goes to the form path if editAction is created in the controller
+        <a href="{{ path('bookreview_books_edit',{'id':book.id}) }}">edit</a>#}
+    {% endfor %}
 {% endblock %}

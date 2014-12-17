@@ -1,11 +1,11 @@
 {% extends 'BookReviewBookBundle::layout.html.twig' %}
 {% block title %}About{% endblock%}
 {% block body %}
-    <header>
-        <h1>About Book Review</h1>
-    </header>
-    <article>
-        <p>This site was created in order to allow users to review books. The books may be added, if not already added. You must be a member in order to add and delete books.
-        You also must be a member to create and edit reviews, however all unauthorised guests may read reviews. </p>
-    </article>
+    <h1>About Book Review</h1>
+
+    <p>Welcome to the Book Review Website. Here you will be able to review books that are enlisted on this site.
+        You can add books to the site if not included already, however if you are a guest here you will only be able to view the reviews.</p>
+
+    <p>You can create an account <a href="{{ path('fos_user_registration_register') }}">here</a>.
+        Or click <a href="{{ path('fos_user_security_login') }}">here</a>, if you already are a member.</p>
 {% endblock %}

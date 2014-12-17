@@ -8,8 +8,13 @@ class PageController extends Controller
 {
     public function indexAction()
     {
+        $em = $this->getDoctrine()->getManager();
+
+        $books = $em->getRepository('BookReviewBookBundle:Book')
+            ->getBooksList(10, 0);
+
         return $this->render('BookReviewBookBundle:Page:index.html.twig', array(
-                // ...
+                'books' => $books
             ));
     }
 

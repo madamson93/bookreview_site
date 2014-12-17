@@ -14,3 +14,9 @@ bookreview_contact:
     defaults: { _controller: BookReviewBookBundle:Page:contact }
     requirements:
         _method: GET
+
+bookreview_books_view:
+    path:     /books/view
+    defaults: { _controller: BookReviewBookBundle:Book:view }
+
+#routes for edit, delete and create here
