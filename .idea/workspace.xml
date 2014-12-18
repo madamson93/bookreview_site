@@ -28,12 +28,15 @@
       <file leaf-file-name="base.html.twig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3253521" vertical-offset="294" max-vertical-offset="1302">
-              <caret line="25" column="80" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="80" />
+            <state vertical-scroll-proportion="1.3901409" vertical-offset="0" max-vertical-offset="1512">
+              <caret line="47" column="37" selection-start-line="47" selection-start-column="37" selection-end-line="47" selection-end-column="37" />
               <folding>
-                <element signature="e#1535#1559#0#Twig" expanded="true" />
-                <element signature="e#1659#1689#0#Twig" expanded="true" />
-                <element signature="e#1760#1783#0#Twig" expanded="true" />
+                <element signature="e#1474#1489#0#Twig" expanded="true" />
+                <element signature="e#1876#1891#0#Twig" expanded="true" />
+                <element signature="e#2012#2036#0#Twig" expanded="true" />
+                <element signature="e#2136#2166#0#Twig" expanded="true" />
+                <element signature="e#2237#2260#0#Twig" expanded="true" />
+                <element signature="e#2357#2373#0#Twig" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -374,10 +377,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="806" max-vertical-offset="1365">
           <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="54" selection-end-column="12" />
-          <folding>
-            <element signature="e#1061#1076#0#Twig" expanded="false" />
-            <element signature="e#1400#1415#0#Twig" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -759,12 +759,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3253521" vertical-offset="294" max-vertical-offset="1302">
-          <caret line="25" column="80" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="80" />
+        <state vertical-scroll-proportion="1.3901409" vertical-offset="0" max-vertical-offset="1512">
+          <caret line="47" column="37" selection-start-line="47" selection-start-column="37" selection-end-line="47" selection-end-column="37" />
           <folding>
-            <element signature="e#1535#1559#0#Twig" expanded="true" />
-            <element signature="e#1659#1689#0#Twig" expanded="true" />
-            <element signature="e#1760#1783#0#Twig" expanded="true" />
+            <element signature="e#1474#1489#0#Twig" expanded="true" />
+            <element signature="e#1876#1891#0#Twig" expanded="true" />
+            <element signature="e#2012#2036#0#Twig" expanded="true" />
+            <element signature="e#2136#2166#0#Twig" expanded="true" />
+            <element signature="e#2237#2260#0#Twig" expanded="true" />
+            <element signature="e#2357#2373#0#Twig" expanded="true" />
           </folding>
         </state>
       </provider>

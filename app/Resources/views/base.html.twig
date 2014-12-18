@@ -17,26 +17,36 @@
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}"/> </head>
 <body>
 <div class="container">
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container-fluid">
-            {# mobile navbar #}
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="{{ path('bookreview_home') }}">Book Reviews</a>
+                {% if is_granted("ROLE_USER") %}
+                    <p class="navbar-text">Sign in as {{ app.user.username }}</p>
+                {% endif %}
+            </div>
 
-            <a class="navbar-brand" href="{{ path('bookreview_home') }}">Book Reviews</a>
-            {% if is_granted("ROLE_USER") %}
-                <p class="navbar-text">Signed in as {{  app.user.username }}</p>
-            {% endif %}
-            <div class="collapse navbar-collapse">
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="{{ path('bookreview_home') }}">Home</a></li>
+
                     {% if is_granted("ROLE_USER") %}
                         <li><a href="{{ path('fos_user_security_logout') }}">Logout</a></li>
                     {% else %}
                         <li><a href="{{ path('fos_user_registration_register') }}">Register</a></li>
                         <li><a href="{{ path('fos_user_security_login') }}">Login</a></li>
                     {% endif %}
+
                     <li><a href="{{ path('bookreview_about') }}">About</a></li>
-                </ul> </div>
-        </div>
+                </ul>
+            </div>{#navbar collapse#}
+        </div>{#container fluid#}
     </nav>
     <div class="row">
         <section class="col-md-3">
