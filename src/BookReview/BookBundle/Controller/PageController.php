@@ -13,8 +13,7 @@ class PageController extends Controller
                     ->getBooks(20, 0);
 
         return $this->render('BookReviewBookBundle:Page:index.html.twig', array(
-            'books' => $books,
-            'username' => $this->getUser()
+            'books' => $books
         ));
     }
 
