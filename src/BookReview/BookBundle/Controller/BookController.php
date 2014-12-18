@@ -12,11 +12,14 @@ class BookController extends Controller
     public function viewAction($id)
     {
         $em = $this->getDoctrine()->getManager();
-
         $book = $em->getRepository('BookReviewBookBundle:Book')->find($id);
 
+        $reviews = $em->getRepository('BookReviewBookBundle:Review')
+                      ->getReviewsforBook($book->getId());
+
         return $this->render('BookReviewBookBundle:Book:view.html.twig', array(
-                'book' => $book
+                'book' => $book,
+                'reviews' => $reviews
         ));
     }
 

@@ -36,3 +36,15 @@ bookreview_books_delete:
     defaults: { _controller: BookReviewBookBundle:Book:delete }
     requirements:
         id: \d+
+
+bookreview_reviews_view:
+    path:     /review/{book_id}
+    defaults: { _controller: BookReviewBookBundle:Review:view }
+    requirements:
+        id: \d+
+
+bookreview_reviews_create:
+    path:     /review/{book_id}
+    defaults: { _controller: BookReviewBookBundle:Review:create }
+    requirements:
+        id: \d+

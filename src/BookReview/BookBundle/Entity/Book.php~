@@ -186,44 +186,4 @@ class Book
     {
         return $this->summary;
     }
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->reviews = new \Doctrine\Common\Collections\ArrayCollection();
-    }
-
-    /**
-     * Add reviews
-     *
-     * @param \BookReview\BookBundle\Entity\Review $reviews
-     * @return Book
-     */
-    public function addReview(\BookReview\BookBundle\Entity\Review $reviews)
-    {
-        $this->reviews[] = $reviews;
-
-        return $this;
-    }
-
-    /**
-     * Remove reviews
-     *
-     * @param \BookReview\BookBundle\Entity\Review $reviews
-     */
-    public function removeReview(\BookReview\BookBundle\Entity\Review $reviews)
-    {
-        $this->reviews->removeElement($reviews);
-    }
-
-    /**
-     * Get reviews
-     *
-     * @return \Doctrine\Common\Collections\Collection 
-     */
-    public function getReviews()
-    {
-        return $this->reviews;
-    }
 }
