@@ -8,6 +8,8 @@
                 <li class="list-group-item">Date Created: {{ review.datecreated | date }}</li>
                 <li class="list-group-item">Review: {{ review.review }}</li>
             </ul>
+        {% else %}
+            <p>There are no reviews on this book yet</p>
         {% endfor %}
     </div>
 {% endblock %}

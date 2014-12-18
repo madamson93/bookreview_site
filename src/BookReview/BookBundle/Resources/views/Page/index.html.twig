@@ -1,16 +1,7 @@
 {% extends 'BookReviewBookBundle::layout.html.twig' %}
 {% block body %}
     <div class="jumbotron">
-        <h1>Welcome,
-            {% if username is empty %}
-                guest
-            {% endif %}
-
-            {% if username %}
-                {{ username }}
-            {% endif %}
-            to Book Review
-        </h1>
+        <h1>Welcome to Book Review</h1>
 
         <p>This website is a site for book lovers and enthusiasts, here you can review books and with the ability to add new books, the site will continue to grow!</p>
         <p><a class="btn btn-success btn-lg" href="{{ path('bookreview_about') }}" role="button">Read more</a></p>
@@ -31,5 +22,7 @@
                 <span><a href="{{ path('bookreview_books_view',{id : book.id}) }}">View more</a></span>
             </div>
         </div>
+    {% else %}
+        <p>There are no books in the system</p>
     {% endfor %}
 {% endblock %}
