@@ -28,7 +28,7 @@
                 </button>
                 <a class="navbar-brand" href="{{ path('bookreview_home') }}">Book Reviews</a>
                 {% if is_granted("ROLE_USER") %}
-                    <p class="navbar-text">Sign in as {{ app.user.username }}</p>
+                    <p class="navbar-text">Signed in as {{ app.user.username }}</p>
                 {% endif %}
             </div>
 
