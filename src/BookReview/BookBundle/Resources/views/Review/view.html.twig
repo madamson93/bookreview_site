@@ -2,9 +2,12 @@
 
 {% block body %}
     <div class="reviews">
-    {% for review in reviews %}
-        <p>{{ review.review }}</p>
-        <p>{{ review.username }}</p>
-    {% endfor %}
+        {% for review in reviews %}
+            <ul class="list-group">
+                <li class="list-group-item">Username: {{ review.username }}</li>
+                <li class="list-group-item">Date Created: {{ review.datecreated | date }}</li>
+                <li class="list-group-item">Review: {{ review.review }}</li>
+            </ul>
+        {% endfor %}
     </div>
 {% endblock %}

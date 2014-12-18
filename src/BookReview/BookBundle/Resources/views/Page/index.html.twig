@@ -1,16 +1,35 @@
 {% extends 'BookReviewBookBundle::layout.html.twig' %}
 {% block body %}
-    <h1>Home page</h1>
+    <div class="jumbotron">
+        <h1>Welcome,
+            {% if username is empty %}
+                guest
+            {% endif %}
+
+            {% if username %}
+                {{ username }}
+            {% endif %}
+            to Book Review
+        </h1>
+
+        <p>This website is a site for book lovers and enthusiasts, here you can review books and with the ability to add new books, the site will continue to grow!</p>
+        <p><a class="btn btn-success btn-lg" href="{{ path('bookreview_about') }}" role="button">Read more</a></p>
+    </div>
 
     {% for book in books %}
-    <div>
-        <h2><a href="{{ path('bookreview_books_view',{id : book.id}) }}">{{ book.title | title }}</a></h2>
-        <ul>
-            <li>Author: {{ book.author }}</li>
-            <li>Genre: {{ book.genre }}</li>
-            <li>Publisher: {{ book.publisher }}</li>
-            <li>Summary: {{ book.summary }}</li>
-        </ul>
-    </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title"><a href="{{ path('bookreview_books_view',{id : book.id}) }}">{{ book.title | title }}</a></h3>
+            </div>
+            <div class="panel-body">
+                <ul>
+                    <li>Author: {{ book.author }}</li>
+                    <li>Genre: {{ book.genre }}</li>
+                    <li>Publisher: {{ book.publisher }}</li>
+                    <li>Summary: {{ book.summary }}</li>
+                </ul>
+                <span><a href="{{ path('bookreview_books_view',{id : book.id}) }}">View more</a></span>
+            </div>
+        </div>
     {% endfor %}
 {% endblock %}

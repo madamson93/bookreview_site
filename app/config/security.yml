@@ -26,7 +26,8 @@ security:
         - { path: ^/admin/, role: ROLE_ADMIN }
         - { path: ^/books/create, role: ROLE_USER }
         - { path: ^/books/edit, role: ROLE_USER }
-        - { path: ^/books/delete, role: ROLE_ADMIN }
+        - { path: ^/books/delete, role: ROLE_USER }
+        - { path: ^/review/, role: ROLE_USER }
 
 
 security:

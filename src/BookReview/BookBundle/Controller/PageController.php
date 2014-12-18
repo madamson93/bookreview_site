@@ -11,8 +11,10 @@ class PageController extends Controller
         $em = $this->getDoctrine()->getManager();
         $books = $em->getRepository('BookReviewBookBundle:Book')
                     ->getBooks(10, 0);
+        
         return $this->render('BookReviewBookBundle:Page:index.html.twig', array(
-            'books' => $books
+            'books' => $books,
+            'username' => $this->getUser()
         ));
     }
 
