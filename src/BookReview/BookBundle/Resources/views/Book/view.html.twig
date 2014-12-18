@@ -16,8 +16,7 @@
             <li><a href="{{ path('bookreview_reviews_create', {book_id: book.id}) }}">Review book</a></li>
         </ul>
     </div>
-    <div>
-        {% include 'BookReviewBookBundle:Review:view.html.twig' with {'reviews': reviews} %}
-    </div>
-
+{% endblock %}
+{% block reviews %}
+    {% include 'BookReviewBookBundle:Review:view.html.twig' with {'reviews': reviews} %}
 {% endblock %}

@@ -9,12 +9,6 @@ use Symfony\Component\HttpFoundation\Request;
 
 class ReviewController extends Controller
 {
-    public function viewAction($book_id){
-
-        $book = $this->getBook($book_id);
-        
-    }
-
     public function createAction($book_id, Request $request)
     {
         $book = $this->getBook($book_id);
@@ -41,7 +35,8 @@ class ReviewController extends Controller
 
         return $this->render('BookReviewBookBundle:Review:create.html.twig', array(
              'form' => $form->createView(),
-             'id' => $book->getId()
+             'id' => $book->getId(),
+             'title' => $book->getTitle()
         ));
     }
 

@@ -1,8 +1,10 @@
 {% extends "::base.html.twig" %}
 
 {% block body %}
+    <div class="reviews">
     {% for review in reviews %}
         <p>{{ review.review }}</p>
         <p>{{ review.username }}</p>
     {% endfor %}
+    </div>
 {% endblock %}
