@@ -4,9 +4,9 @@
     <div class="reviews">
         {% for review in reviews %}
             <ul class="list-group">
-                <li class="list-group-item">Username: {{ review.username }}</li>
+                <li class="list-group-item">Reviewer: {{ review.username | lower }}</li>
                 <li class="list-group-item">Date Created: {{ review.datecreated | date }}</li>
-                <li class="list-group-item">Review: {{ review.review }}</li>
+                <li class="list-group-item">Review: {{ review.review | capitalize }}</li>
             </ul>
         {% else %}
             <p>There are no reviews on this book yet</p>

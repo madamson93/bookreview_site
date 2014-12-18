@@ -9,10 +9,10 @@
         </div>
         <div class="panel-body">
             <ul>
-                <li>Author: {{ book.author }}</li>
-                <li>Genre: {{ book.genre }}</li>
-                <li>Publisher: {{ book.publisher }}</li>
-                <li>Summary: {{ book.summary }}</li>
+                <li>Author: {{ book.author | title }}</li>
+                <li>Genre: {{ book.genre | capitalize }}</li>
+                <li>Publisher: {{ book.publisher | capitalize }}</li>
+                <li>Summary: {{ book.summary | capitalize }}</li>
             </ul>
             <button type="button" class="btn btn-default"><a href="{{ path('bookreview_books_edit',{id: book.id}) }}">Edit this book</a></button>
             <button type="button" class="btn btn-default"><a href="{{ path('bookreview_reviews_create', {book_id: book.id}) }}">Write a review</a></button>
