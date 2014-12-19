@@ -99,7 +99,6 @@ liip_imagine:
     filter_sets:
         cache: ~
         book_image_thumb:
-            format: jpeg
-            quality: 80
+            quality: 90
             filters:
-                thumbnail: { size: [100, 80], mode: outbound }
+                thumbnail: { size: [100, 80], mode: inset }
