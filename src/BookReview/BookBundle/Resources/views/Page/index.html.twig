@@ -8,27 +8,16 @@
     </div>
 
     {% for book in books %}
-        {#<div class="panel panel-default">#}
-            {#<div class="panel-heading">#}
-                {#<h3 class="panel-title"><a href="{{ path('bookreview_books_view',{id : book.id}) }}">{{ book.title | title }}</a></h3>#}
-            {#</div>#}
-            {#<div class="panel-body">#}
-                {#<ul>#}
-                    {#<li>Author: {{ book.author | title }}</li>#}
-                    {#<li>Genre: {{ book.genre | capitalize }}</li>#}
-                    {#<li>Publisher: {{ book.publisher | title }}</li>#}
-                    {#<li>Summary: {{ book.summary | capitalize }}</li>#}
-                {#</ul>#}
-                {#<span><a href="{{ path('bookreview_books_view',{id : book.id}) }}">View more</a></span>#}
-            {#</div>#}
-        {#</div>#}
-
         <div class="media">
             <span class="media-left">
                 {% if book.photo %}
-                    <img src="{{ book.photo.path }}" alt="{{ book.photo.fileName }}" />
+                <a href="{{ path('bookreview_books_view',{id : book.id}) }}">
+                    <img src="{{ book.photo.path | imagine_filter('book_image_thumb') }}" alt="{{ book.photo.fileName }}" />
+                </a>
                 {% else %}
+                <a href="{{ path('bookreview_books_view',{id : book.id}) }}">
                     <img src="http://placehold.it/100x80&text=no+image+" />
+                </a>
                 {% endif %}
             </span>
             <div class="media-body">
@@ -39,7 +28,6 @@
                     <li>Publisher: {{ book.publisher | title }}</li>
                     <li>Summary: {{ book.summary | capitalize }}</li>
                 </ul>
-                <a href="{{ path('bookreview_books_view',{id : book.id}) }}">View more</a>
             </div>
         </div>
     {% else %}

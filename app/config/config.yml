@@ -89,3 +89,17 @@ iphp_file_store:
        book_image:
            upload_dir:  %kernel.root_dir%/../web/images/books
            upload_path: /images/books
+
+# Liip Imagine Bundle
+liip_imagine:
+    resolvers:
+       default:
+          web_path: ~
+
+    filter_sets:
+        cache: ~
+        book_image_thumb:
+            format: jpeg
+            quality: 80
+            filters:
+                thumbnail: { size: [100, 80], mode: outbound }
