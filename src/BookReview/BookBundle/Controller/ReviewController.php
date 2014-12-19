@@ -23,11 +23,12 @@ class ReviewController extends Controller
 
         if($form->isValid()){
             $review->setUsername($this->getUser()->getUsername());
-            $review->setDatecreated(new \DateTime());
+            $review->setDatecreated(new \DateTime("now", new \DateTimeZone("Europe/London")));
             $review->setBook($book);
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($review);
-            $em->flush();
+
+            //uses custom service to persist data
+            $this->get("book_review_book.data")->saveData($review);
+
             return $this->redirect($this->generateUrl('bookreview_books_view', array(
                 'id' => $book->getId()
             )));

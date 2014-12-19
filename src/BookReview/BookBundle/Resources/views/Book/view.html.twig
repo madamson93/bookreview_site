@@ -11,7 +11,7 @@
             <ul>
                 <li>Author: {{ book.author | title }}</li>
                 <li>Genre: {{ book.genre | capitalize }}</li>
-                <li>Publisher: {{ book.publisher | capitalize }}</li>
+                <li>Publisher: {{ book.publisher | title }}</li>
                 <li>Summary: {{ book.summary | capitalize }}</li>
             </ul>
             <button type="button" class="btn btn-default"><a href="{{ path('bookreview_books_edit',{id: book.id}) }}">Edit this book</a></button>

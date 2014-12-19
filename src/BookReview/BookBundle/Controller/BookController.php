@@ -36,9 +36,9 @@ class BookController extends Controller
         $form->handleRequest($request);
 
         if($form->isValid()){
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($book);
-            $em->flush();
+
+            //uses custom service to persist data
+            $this->get("book_review_book.data")->saveData($book);
 
             return $this->redirect($this->generateUrl('bookreview_books_view', array(
                 'id' => $book->getId()
@@ -48,6 +48,7 @@ class BookController extends Controller
         return $this->render('BookReviewBookBundle:Book:create.html.twig', array(
             'form' => $form->createView()
         ));
+
     }
 
     public function editAction($id, Request $request)
@@ -75,10 +76,10 @@ class BookController extends Controller
 
     public function deleteAction($id)
     {
-        $em = $this->getDoctrine()->getManager();
         $book = $em->getRepository('BookReviewBookBundle:Book')->find($id);
-        $em->remove($book);
-        $em->flush();
+
+        $this->get("book_review_book.data")->deleteData($book);
+
         return $this->redirect($this->generateUrl('bookreview_home'));
     }
 
