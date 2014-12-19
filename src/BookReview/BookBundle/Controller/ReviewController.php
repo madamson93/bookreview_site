@@ -49,4 +49,29 @@ class ReviewController extends Controller
         return $book;
     }
 
+    public function editAction($id, Request $request){
+
+        $em = $this->getDoctrine()->getManager();
+        $review = $em->getRepository('BookReviewBookBundle:Review')->find($id);
+
+        $form = $this->createForm(new ReviewType(), $review, array(
+            'action' => $request->getUri()
+        ));
+
+        $form->handleRequest($request);
+
+        if($form->isValid()){
+            $em->flush();
+            return $this->redirect($this->generateUrl('bookreview_books_view', array(
+                'id' => $review->getBook()->getId()
+            )));
+        }
+
+        return $this->render('BookReviewBookBundle:Review:edit.html.twig', array(
+            'form' => $form->createView(),
+            'review' => $review,
+            'book' => $review->getBook()
+        ));
+    }
+
 }

@@ -46,3 +46,9 @@ bookreview_reviews_create:
     defaults: { _controller: BookReviewBookBundle:Review:create }
     requirements:
         id: \d+
+
+bookreview_reviews_edit:
+    path:     /review/edit/{id}
+    defaults: { _controller: BookReviewBookBundle:Review:edit }
+    requirements:
+        id: \d+

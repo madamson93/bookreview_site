@@ -7,7 +7,7 @@
                 <li class="list-group-item">Reviewer: {{ review.username | lower }}</li>
                 <li class="list-group-item">Date Created: {{ review.datecreated | date }}</li>
                 {% if app.user.username == review.username %}
-                    <a href="#" class="list-group-item" data-toggle="tooltip" data-placement="left" title="Click to edit the review">
+                    <a href="{{ path('bookreview_reviews_edit',{id: review.id}) }}" class="list-group-item" data-toggle="tooltip" data-placement="left" title="Click to edit review">
                         Review: {{ review.review | capitalize }}
                     </a>
                 {% else %}

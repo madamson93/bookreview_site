@@ -6,6 +6,6 @@
     <div>
         <h1>Edit a book</h1>
         {{ form(form) }}
-        <a href="{{ path('bookreview_books_delete',{id: book.id}) }}">delete</a>
+        <button type="button" class="btn btn-default"><a href="{{ path('bookreview_books_delete',{id: book.id}) }}">Delete book</a></button>
     </div>
 {% endblock %}
