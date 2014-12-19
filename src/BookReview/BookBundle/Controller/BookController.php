@@ -17,10 +17,7 @@ class BookController extends Controller
         $reviews = $em->getRepository('BookReviewBookBundle:Review')
                       ->getReviewsforBook($book->getId());
 
-        return $this->render('BookReviewBookBundle:Book:view.html.twig', array(
-                'book' => $book,
-                'reviews' => $reviews
-        ));
+
     }
 
     public function createAction(Request $request)
@@ -78,6 +75,18 @@ class BookController extends Controller
         $em->remove($book);
         $em->flush();
         return $this->redirect($this->generateUrl('bookreview_home'));
+    }
+
+    public function searchAction($query)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $book = $em->getRepository('BookReviewBookBundle:Book')
+                    ->findBookByGenre($query);
+
+        return $this->render('BookReviewBookBundle:Book:search.html.twig', array(
+            'book' => $book
+        ));
+
     }
 
 }

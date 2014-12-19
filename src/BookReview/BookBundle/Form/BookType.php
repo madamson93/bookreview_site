@@ -20,7 +20,9 @@ class BookType extends AbstractType
             ->add('genre')
             ->add('publisher')
             ->add('summary')
+            ->add('reset', 'reset')
             ->add('submit', 'submit')
+
         ;
     }
     

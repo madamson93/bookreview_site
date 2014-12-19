@@ -1,7 +1,16 @@
 {% extends '::base.html.twig' %}
 {% block sidebar %}
-    <h3>Site Links</h3>
+    <h2>Site Links</h2>
     <ul>
         <li><a href="{{ path('bookreview_books_create') }}">Add a new book</a></li>
+    </ul>
+
+    <h2>Book Genres</h2>
+    <ul>
+        <li><a href="{{ path('bookreview_books_search', {query: 'Fantasy'}) }}">Fantasy</a></li>
+        <li><a href="{{ path('bookreview_books_search', {query: 'Adventure'}) }}">Adventure</a></li>
+        <li><a href="{{ path('bookreview_books_search', {query: 'Memoir'}) }}">Memoir</a></li>
+        <li><a href="{{ path('bookreview_books_search', {query: 'American'}) }}">American</a></li>
+        <li><a href="{{ path('bookreview_books_search', {query: 'Historical Fiction'}) }}">Historical Fiction</a></li>
     </ul>
 {% endblock %}
