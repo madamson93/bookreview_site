@@ -6,7 +6,13 @@
             <ul class="list-group">
                 <li class="list-group-item">Reviewer: {{ review.username | lower }}</li>
                 <li class="list-group-item">Date Created: {{ review.datecreated | date }}</li>
-                <li class="list-group-item">Review: {{ review.review | capitalize }}</li>
+                {% if app.user.username == review.username %}
+                    <a href="#" class="list-group-item" data-toggle="tooltip" data-placement="left" title="Click to edit the review">
+                        Review: {{ review.review | capitalize }}
+                    </a>
+                {% else %}
+                    <li class="list-group-item">Review: {{ review.review | capitalize }}</li>
+                {% endif %}
             </ul>
         {% else %}
             <p>There are no reviews on this book yet</p>
