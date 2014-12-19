@@ -17,6 +17,11 @@ class BookController extends Controller
         $reviews = $em->getRepository('BookReviewBookBundle:Review')
                       ->getReviewsforBook($book->getId());
 
+        return $this->render('BookReviewBookBundle:Book:view.html.twig', array(
+            'book' => $book,
+            'reviews' => $reviews
+        ));
+
 
     }
 
