@@ -21,7 +21,6 @@ class AppKernel extends Kernel
             new BookReview\UserBundle\BookReviewUserBundle(),
             new FOS\UserBundle\FOSUserBundle(),
             new Iphp\FileStoreBundle\IphpFileStoreBundle(),
-            new Liip\ImagineBundle\LiipImagineBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

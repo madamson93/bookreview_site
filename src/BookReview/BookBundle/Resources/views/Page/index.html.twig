@@ -12,7 +12,7 @@
             <span class="media-left">
                 {% if book.photo %}
                 <a href="{{ path('bookreview_books_view',{id : book.id}) }}">
-                    <img src="{{ book.photo.path | imagine_filter('book_image_thumb') }}" alt="{{ book.photo.fileName }}" />
+                    <img src="{{ book.photo.path }}" alt="{{ book.photo.fileName }}" />
                 </a>
                 {% else %}
                 <a href="{{ path('bookreview_books_view',{id : book.id}) }}">
