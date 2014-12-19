@@ -20,6 +20,7 @@ class BookType extends AbstractType
             ->add('genre')
             ->add('publisher')
             ->add('summary')
+            ->add('photo', 'iphp_file')
             ->add('reset', 'reset')
             ->add('submit', 'submit')
 

@@ -20,6 +20,7 @@ class AppKernel extends Kernel
             new BookReview\BookBundle\BookReviewBookBundle(),
             new BookReview\UserBundle\BookReviewUserBundle(),
             new FOS\UserBundle\FOSUserBundle(),
+            new Iphp\FileStoreBundle\IphpFileStoreBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

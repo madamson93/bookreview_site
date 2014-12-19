@@ -3,12 +3,14 @@
 namespace BookReview\BookBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Iphp\FileStoreBundle\Mapping\Annotation as FileStore;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * Book
  *
  * @ORM\Table(name="assignment_books")
  * @ORM\Entity(repositoryClass="BookReview\BookBundle\Entity\BookRepository")
+ * @FileStore\Uploadable
  */
 class Book
 {
@@ -61,6 +63,13 @@ class Book
      * @ORM\OneToMany(targetEntity="BookReview\BookBundle\Entity\Review", mappedBy="book")
      */
     private $reviews;
+
+    /**
+     * @ORM\Column(type="array", nullable=true)
+     * @Assert\Image( maxSize="20M")
+     * @FileStore\UploadableField(mapping="book_image")
+     **/
+    private $photo;
 
     /**
      * Get id
@@ -225,5 +234,21 @@ class Book
     public function getReviews()
     {
         return $this->reviews;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPhoto()
+    {
+        return $this->photo;
+    }
+
+    /**
+     * @param mixed $photo
+     */
+    public function setPhoto($photo)
+    {
+        $this->photo = $photo;
     }
 }

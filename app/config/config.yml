@@ -82,3 +82,10 @@ fos_user:
     db_driver: orm # other valid values are 'mongodb', 'couchdb' and 'propel'
     firewall_name: main
     user_class: BookReview\UserBundle\Entity\User
+
+# IPHP Configuration
+iphp_file_store:
+    mappings:
+       book_image:
+           upload_dir:  %kernel.root_dir%/../web/images/books
+           upload_path: /images/books
