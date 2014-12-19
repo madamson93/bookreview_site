@@ -19,7 +19,7 @@
         "sensio/framework-extra-bundle": "~3.0",
         "incenteev/composer-parameter-handler": "~2.0",
         "friendsofsymfony/user-bundle": "~2.0@dev",
-        "iphp/filestore-bundle" : "@stable"
+        "iphp/filestore-bundle" : "@stable",
     },
     "require-dev": {
         "sensio/generator-bundle": "~2.3"
