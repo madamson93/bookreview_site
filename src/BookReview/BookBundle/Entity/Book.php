@@ -5,9 +5,10 @@ namespace BookReview\BookBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use Iphp\FileStoreBundle\Mapping\Annotation as FileStore;
 use Symfony\Component\Validator\Constraints as Assert;
+use M78\SearchBundle\Annotations as Indexer;
 
 /**
- *
+ * @Indexer\Indexable
  * @ORM\Table(name="assignment_books")
  * @ORM\Entity(repositoryClass="BookReview\BookBundle\Entity\BookRepository")
  * @FileStore\Uploadable
@@ -27,6 +28,7 @@ class Book
      * @var string
      *
      * @ORM\Column(name="title", type="string", length=255)
+     * @Indexer\Text
      */
     private $title;
 
@@ -34,6 +36,7 @@ class Book
      * @var string
      *
      * @ORM\Column(name="author", type="string", length=255)
+     * @Indexer\Text
      */
     private $author;
 
@@ -41,6 +44,7 @@ class Book
      * @var string
      *
      * @ORM\Column(name="genre", type="string", length=255)
+     * @Indexer\Keyword
      */
     private $genre;
 
@@ -48,6 +52,7 @@ class Book
      * @var string
      *
      * @ORM\Column(name="publisher", type="string", length=255)
+     * @Indexer\Text
      */
     private $publisher;
 

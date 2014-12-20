@@ -22,13 +22,13 @@ class BookRepository extends EntityRepository
         return $query->getResult();
     }
 
-    public function findBookByGenre($query){
-        $qb = $this->createQueryBuilder('book')
-            ->select('book')
-            ->where('book.genre = :query')
-            ->setParameter('query', $query);
-
-        return $qb->getQuery()
-            ->getResult();
-    }
+//    public function findBookByGenre($query){
+//        $qb = $this->createQueryBuilder('book')
+//            ->select('book')
+//            ->where('book.genre = :query')
+//            ->setParameter('query', $query);
+//
+//        return $qb->getQuery()
+//            ->getResult();
+//    }
 }
