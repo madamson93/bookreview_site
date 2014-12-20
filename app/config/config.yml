@@ -89,3 +89,10 @@ iphp_file_store:
        book_image:
            upload_dir:  %kernel.root_dir%/../web/images/books
            upload_path: /images/books
+
+# Liip Image Bundle
+liip_imagine:
+    filter_sets:
+        book_thumb:
+            filters:
+                thumbnail: { size: [140, 210], mode: outbound }

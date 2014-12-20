@@ -77,6 +77,8 @@ class BookController extends Controller
 
     public function deleteAction($id)
     {
+        $em = $this->getDoctrine()->getManager();
+
         $book = $em->getRepository('BookReviewBookBundle:Book')->find($id);
 
         $this->get("book_review_book.data")->deleteData($book);
