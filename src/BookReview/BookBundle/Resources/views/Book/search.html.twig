@@ -3,25 +3,23 @@
 {% block title %}Search result{% endblock %}
 
 {% block body %}
-     {# dump the query result to test #}
-
-    {#{% for book in book %}#}
-    {#<div class="panel panel-default">#}
-        {#<div class="panel-heading">#}
-            {#<h3 class="panel-title">{{ book.title | title }}</h3>#}
-        {#</div>#}
-        {#<div class="panel-body">#}
-            {#<ul>#}
-                {#<li>Author: {{ book.author | title }}</li>#}
-                {#<li>Genre: {{ book.genre | capitalize }}</li>#}
-                {#<li>Publisher: {{ book.publisher | capitalize }}</li>#}
-                {#<li>Summary: {{ book.summary | capitalize }}</li>#}
-            {#</ul>#}
-            {#<button type="button" class="btn btn-default"><a href="{{ path('bookreview_books_edit',{id: book.id}) }}">Edit this book</a></button>#}
-            {#<button type="button" class="btn btn-default"><a href="{{ path('bookreview_reviews_create', {book_id: book.id}) }}">Write a review</a></button>#}
-        {#</div>#}
-    {#</div>#}
-     {#{% else %}#}
-        {#<p>No books in this genre...</p>#}
-    {#{% endfor %}#}
+    {% for book in books %}
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">{{ book.title | title }}</h3>
+        </div>
+        <div class="panel-body">
+            <ul>
+                <li>Author: {{ book.author | title }}</li>
+                <li>Genre: {{ book.genre | capitalize }}</li>
+                <li>Publisher: {{ book.publisher | capitalize }}</li>
+                <li>Summary: {{ book.summary | capitalize }}</li>
+            </ul>
+            <button type="button" class="btn btn-default"><a href="{{ path('bookreview_books_edit',{id: book.id}) }}">Edit this book</a></button>
+            <button type="button" class="btn btn-default"><a href="{{ path('bookreview_reviews_create', {book_id: book.id}) }}">Write a review</a></button>
+        </div>
+    </div>
+     {% else %}
+        <p>No books in this genre...</p>
+    {% endfor %}
 {% endblock %}
