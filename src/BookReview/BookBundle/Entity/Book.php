@@ -5,9 +5,7 @@ namespace BookReview\BookBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use Iphp\FileStoreBundle\Mapping\Annotation as FileStore;
 use Symfony\Component\Validator\Constraints as Assert;
-
 /**
- *
  * @ORM\Table(name="assignment_books")
  * @ORM\Entity(repositoryClass="BookReview\BookBundle\Entity\BookRepository")
  * @FileStore\Uploadable

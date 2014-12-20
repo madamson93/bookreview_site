@@ -86,14 +86,14 @@ class BookController extends Controller
         return $this->redirect($this->generateUrl('bookreview_home'));
     }
 
-    public function searchAction($query)
+    public function searchAction()
     {
-        $em = $this->getDoctrine()->getManager();
-        $book = $em->getRepository('BookReviewBookBundle:Book')
-                    ->findBookByGenre($query);
+        //search logic here using service/bundle
+
+
 
         return $this->render('BookReviewBookBundle:Book:search.html.twig', array(
-            'book' => $book
+            // ...
         ));
 
     }
