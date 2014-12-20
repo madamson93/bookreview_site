@@ -5,7 +5,8 @@
 
     <p>Welcome to the Book Review Website. Here you will be able to review books that are enlisted on this site.
         You can add books to the site if not included already, however if you are a guest here you will only be able to view the reviews.</p>
-
+    {% if app.user is empty %}
     <p>You can create an account <a href="{{ path('fos_user_registration_register') }}">here</a>.
         Or click <a href="{{ path('fos_user_security_login') }}">here</a>, if you already are a member.</p>
+    {% endif %}
 {% endblock %}

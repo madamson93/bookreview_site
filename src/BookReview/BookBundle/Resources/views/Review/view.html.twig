@@ -4,7 +4,7 @@
     <div class="reviews">
         {% for review in reviews %}
             <ul class="list-group">
-                <li class="list-group-item">Reviewer: {{ review.username | lower }}</li>
+                <li class="list-group-item list-group-item-info">Reviewer: {{ review.username | lower }}</li>
                 <li class="list-group-item">Date Created: {{ review.datecreated | date }}</li>
                 {% if app.user.username == review.username %}
                     <a href="{{ path('bookreview_reviews_edit',{id: review.id}) }}" class="list-group-item" data-toggle="tooltip" data-placement="left" title="Click to edit review">
