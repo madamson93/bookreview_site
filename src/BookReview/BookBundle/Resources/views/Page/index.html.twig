@@ -21,12 +21,13 @@
                 {% endif %}
             </span>
             <div class="media-body">
-                <a href="{{ path('bookreview_books_view',{id : book.id}) }}"><h4 class="media-heading">{{ book.title | title }}</h4></a>
+                <a href="{{ path('bookreview_books_view',{id : book.id}) }}"><h4 class="media-heading">{{ book.title | title }} <span class="label label-success">{{ book.reviews | length }}</span></h4></a>
                 <ul>
                     <li>Author: {{ book.author | title }}</li>
                     <li>Genre: {{ book.genre | capitalize }}</li>
                     <li>Publisher: {{ book.publisher | title }}</li>
                     <li>Summary: {{ book.summary | capitalize }}</li>
+                    <li>Number of reviews: {{ book.reviews | length }}</li>
                 </ul>
             </div>
         </div>

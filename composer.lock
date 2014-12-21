@@ -4,20 +4,69 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "63b200b645b413cb7e189e1d4d5b9fef",
+    "hash": "b9c06d14482a607612942b46823ccacf",
     "packages": [
         {
-            "name": "doctrine/annotations",
-            "version": "v1.2.2",
+            "name": "ccc/star-rating-bundle",
+            "version": "dev-master",
+            "target-dir": "CCC/StarRatingBundle",
             "source": {
                 "type": "git",
-                "url": "https://github.com/doctrine/annotations.git",
-                "reference": "d63108433190110c0ceb8be6460dda6f78348950"
+                "url": "https://github.com/nurikabe/StarRatingBundle.git",
+                "reference": "a792b527204c032db6d81bf90d436c61e3b06482"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/annotations/zipball/d63108433190110c0ceb8be6460dda6f78348950",
-                "reference": "d63108433190110c0ceb8be6460dda6f78348950",
+                "url": "https://api.github.com/repos/nurikabe/StarRatingBundle/zipball/a792b527204c032db6d81bf90d436c61e3b06482",
+                "reference": "a792b527204c032db6d81bf90d436c61e3b06482",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2",
+                "symfony/symfony": "~2.1"
+            },
+            "suggest": {
+                "fyneworks/star-rating": "The Star Rating Plugin for the jQuery"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-0": {
+                    "CCC\\StarRatingBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Evan Owens",
+                    "email": "eaowens@gmail.com"
+                }
+            ],
+            "description": "Twig extension for quick integration of FyneWorks' Star Rating widget",
+            "homepage": "http://github.com/nurikabe/StarRatingBundle",
+            "keywords": [
+                "form",
+                "fyneworks",
+                "star-rating",
+                "symfony",
+                "twig"
+            ],
+            "time": "2014-12-02 15:35:47"
+        },
+        {
+            "name": "doctrine/annotations",
+            "version": "v1.2.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/annotations.git",
+                "reference": "eeda578cbe24a170331a1cfdf78be723412df7a4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/annotations/zipball/eeda578cbe24a170331a1cfdf78be723412df7a4",
+                "reference": "eeda578cbe24a170331a1cfdf78be723412df7a4",
                 "shasum": ""
             },
             "require": {
@@ -72,7 +121,7 @@
                 "docblock",
                 "parser"
             ],
-            "time": "2014-12-18 18:30:08"
+            "time": "2014-12-20 20:49:38"
         },
         {
             "name": "doctrine/cache",
@@ -525,22 +574,30 @@
         },
         {
             "name": "doctrine/inflector",
-            "version": "v1.0",
+            "version": "v1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/inflector.git",
-                "reference": "54b8333d2a5682afdc690060c1cf384ba9f47f08"
+                "reference": "0bcb2e79d8571787f18b7eb036ed3d004908e604"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/inflector/zipball/54b8333d2a5682afdc690060c1cf384ba9f47f08",
-                "reference": "54b8333d2a5682afdc690060c1cf384ba9f47f08",
+                "url": "https://api.github.com/repos/doctrine/inflector/zipball/0bcb2e79d8571787f18b7eb036ed3d004908e604",
+                "reference": "0bcb2e79d8571787f18b7eb036ed3d004908e604",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.2"
             },
+            "require-dev": {
+                "phpunit/phpunit": "4.*"
+            },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
             "autoload": {
                 "psr-0": {
                     "Doctrine\\Common\\Inflector\\": "lib/"
@@ -552,17 +609,6 @@
             ],
             "authors": [
                 {
-                    "name": "Jonathan Wage",
-                    "email": "jonwage@gmail.com",
-                    "homepage": "http://www.jwage.com/",
-                    "role": "Creator"
-                },
-                {
-                    "name": "Guilherme Blanco",
-                    "email": "guilhermeblanco@gmail.com",
-                    "homepage": "http://www.instaclick.com"
-                },
-                {
                     "name": "Roman Borschel",
                     "email": "roman@code-factory.org"
                 },
@@ -571,21 +617,27 @@
                     "email": "kontakt@beberlei.de"
                 },
                 {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com"
+                },
+                {
+                    "name": "Jonathan Wage",
+                    "email": "jonwage@gmail.com"
+                },
+                {
                     "name": "Johannes Schmitt",
-                    "email": "schmittjoh@gmail.com",
-                    "homepage": "https://github.com/schmittjoh",
-                    "role": "Developer of wrapped JMSSerializerBundle"
+                    "email": "schmittjoh@gmail.com"
                 }
             ],
             "description": "Common String Manipulations with regard to casing and singular/plural rules.",
             "homepage": "http://www.doctrine-project.org",
             "keywords": [
                 "inflection",
-                "pluarlize",
-                "singuarlize",
+                "pluralize",
+                "singularize",
                 "string"
             ],
-            "time": "2013-01-10 21:49:15"
+            "time": "2014-12-20 21:24:13"
         },
         {
             "name": "doctrine/lexer",
@@ -779,6 +831,28 @@
                 "User management"
             ],
             "time": "2014-09-26 15:02:08"
+        },
+        {
+            "name": "fyneworks/jquery-star-rating",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bloody-hell/star-rating.git",
+                "reference": "a55cbd2b7c652423fe906987d5a8ef44a22c6032"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bloody-hell/star-rating/zipball/a55cbd2b7c652423fe906987d5a8ef44a22c6032",
+                "reference": "a55cbd2b7c652423fe906987d5a8ef44a22c6032",
+                "shasum": ""
+            },
+            "type": "package",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "description": "Star rating widget",
+            "time": "2014-03-19 06:29:45"
         },
         {
             "name": "imagine/imagine",
@@ -1917,7 +1991,9 @@
     "stability-flags": {
         "friendsofsymfony/user-bundle": 20,
         "iphp/filestore-bundle": 0,
-        "liip/imagine-bundle": 20
+        "liip/imagine-bundle": 20,
+        "fyneworks/jquery-star-rating": 20,
+        "ccc/star-rating-bundle": 20
     },
     "prefer-stable": true,
     "platform": {

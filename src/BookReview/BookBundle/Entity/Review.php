@@ -49,6 +49,13 @@ class Review
      */
     private $datecreated;
 
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="rating", type="integer", nullable=true)
+     */
+    private $rating;
+
 
     /**
      * Get id
@@ -173,5 +180,28 @@ class Review
     public function getBook()
     {
         return $this->book;
+    }
+
+    /**
+     * Set rating
+     *
+     * @param integer $rating
+     * @return Review
+     */
+    public function setRating($rating)
+    {
+        $this->rating = $rating;
+
+        return $this;
+    }
+
+    /**
+     * Get rating
+     *
+     * @return integer 
+     */
+    public function getRating()
+    {
+        return $this->rating;
     }
 }

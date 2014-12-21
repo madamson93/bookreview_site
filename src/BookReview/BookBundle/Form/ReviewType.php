@@ -16,6 +16,11 @@ class ReviewType extends AbstractType
     {
         $builder
             ->add('review')
+            ->add('rating', 'choice', array(
+                'choices' => array(1 => 'Very Poor', 2  => 'Poor', 3 => 'OK', 4=> 'Great', 5 => 'Excellent'),
+                'expanded' => true,  // radio or checkbox...
+                'multiple' => false  // ...but not checkbox
+            ))
             ->add('submit', 'submit')
         ;
     }

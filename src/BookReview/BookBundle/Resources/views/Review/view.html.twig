@@ -16,6 +16,11 @@
                 {% else %}
                     <li class="list-group-item">Review: {{ review.review | capitalize }}</li>
                 {% endif %}
+                {% if review.rating %}
+                        <div class="well">
+                            {{ review.rating | star_rating }}
+                        </div>
+                {% endif %}
             </ul>
         {% else %}
             <p>There are no reviews on this book yet</p>

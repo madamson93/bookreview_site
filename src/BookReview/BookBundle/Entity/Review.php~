@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Review
  *
- * @ORM\Table()
+ * @ORM\Table(name="assignment_review")
  * @ORM\Entity(repositoryClass="BookReview\BookBundle\Entity\ReviewRepository")
  */
 class Review
@@ -48,6 +48,13 @@ class Review
      * @ORM\Column(name="datecreated", type="datetime")
      */
     private $datecreated;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="rating", type="integer")
+     */
+    private $rating;
 
 
     /**
@@ -150,5 +157,28 @@ class Review
     public function getDatecreated()
     {
         return $this->datecreated;
+    }
+
+    /**
+     * Set book
+     *
+     * @param \BookReview\BookBundle\Entity\Book $book
+     * @return Review
+     */
+    public function setBook(\BookReview\BookBundle\Entity\Book $book = null)
+    {
+        $this->book = $book;
+
+        return $this;
+    }
+
+    /**
+     * Get book
+     *
+     * @return \BookReview\BookBundle\Entity\Book 
+     */
+    public function getBook()
+    {
+        return $this->book;
     }
 }
