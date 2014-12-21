@@ -1,12 +1,12 @@
 {% extends '::base.html.twig' %}
 {% block sidebar %}
     <h2>Site Links</h2>
-    <ul>
+    <ul class="nav nav-pills nav-stacked">
         <li><a href="{{ path('bookreview_books_create') }}">Add a new book</a></li>
     </ul>
 
     <h2>Book Genres</h2>
-    <ul>
+    <ul class="nav nav-pills nav-stacked">
         <li><a href="{{ path('bookreview_books_filter', {query: 'Fantasy'}) }}">Fantasy</a></li>
         <li><a href="{{ path('bookreview_books_filter', {query: 'Adventure'}) }}">Adventure</a></li>
         <li><a href="{{ path('bookreview_books_filter', {query: 'Memoir'}) }}">Memoir</a></li>

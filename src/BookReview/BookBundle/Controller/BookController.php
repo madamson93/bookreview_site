@@ -99,4 +99,12 @@ class BookController extends Controller
 
     }
 
+    public function newAction(){
+
+
+        return $this->render('BookReviewBookBundle:Book:view.html.twig', array(
+            // ...
+        ));
+    }
+
 }

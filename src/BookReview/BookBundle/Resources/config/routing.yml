@@ -41,6 +41,9 @@ bookreview_books_filter:
     path: /books/filter/{query}
     defaults: { _controller: BookReviewBookBundle:Book:filter }
 
+bookreview_book_search:
+    path: /books/filter/
+
 bookreview_reviews_create:
     path:     /review/{book_id}
     defaults: { _controller: BookReviewBookBundle:Review:create }
