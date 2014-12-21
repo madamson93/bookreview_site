@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "b9c06d14482a607612942b46823ccacf",
+    "hash": "c59e1d3411da9a98d17494a115e0d1f2",
     "packages": [
         {
             "name": "ccc/star-rating-bundle",
@@ -765,6 +765,58 @@
             "time": "2014-12-16 13:45:01"
         },
         {
+            "name": "emhar/search-doctrine-bundle",
+            "version": "dev-master",
+            "target-dir": "Emhar/SearchDoctrineBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/emhar/SearchDoctrineBundle.git",
+                "reference": "0844cda4a6972dd71c04c0b38dba1ebf9b15c238"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/emhar/SearchDoctrineBundle/zipball/0844cda4a6972dd71c04c0b38dba1ebf9b15c238",
+                "reference": "0844cda4a6972dd71c04c0b38dba1ebf9b15c238",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/annotations": ">=1.0.0",
+                "doctrine/cache": ">=1.0.0",
+                "doctrine/orm": ">=2.4.0",
+                "symfony/form": ">=2.3.0",
+                "symfony/framework-bundle": ">=2.1.8"
+            },
+            "require-dev": {
+                "beberlei/doctrineextensions": "*",
+                "halleck45/php-metrics": "*",
+                "phpunit/dbunit": "*"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-0": {
+                    "Emhar\\SearchDoctrineBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Emhar"
+                }
+            ],
+            "description": "Simple way to create a search service in tiny web sites. It works without search engine, just with Doctrine ORM.",
+            "homepage": "https://github.com/emhar/SearchDoctrineBundle",
+            "keywords": [
+                "doctrine",
+                "search",
+                "search engine",
+                "symfony"
+            ],
+            "time": "2014-08-23 12:52:19"
+        },
+        {
             "name": "friendsofsymfony/user-bundle",
             "version": "v2.0.0-alpha1",
             "target-dir": "FOS/UserBundle",
@@ -831,28 +883,6 @@
                 "User management"
             ],
             "time": "2014-09-26 15:02:08"
-        },
-        {
-            "name": "fyneworks/jquery-star-rating",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/bloody-hell/star-rating.git",
-                "reference": "a55cbd2b7c652423fe906987d5a8ef44a22c6032"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/bloody-hell/star-rating/zipball/a55cbd2b7c652423fe906987d5a8ef44a22c6032",
-                "reference": "a55cbd2b7c652423fe906987d5a8ef44a22c6032",
-                "shasum": ""
-            },
-            "type": "package",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "proprietary"
-            ],
-            "description": "Star rating widget",
-            "time": "2014-03-19 06:29:45"
         },
         {
             "name": "imagine/imagine",
@@ -1992,8 +2022,8 @@
         "friendsofsymfony/user-bundle": 20,
         "iphp/filestore-bundle": 0,
         "liip/imagine-bundle": 20,
-        "fyneworks/jquery-star-rating": 20,
-        "ccc/star-rating-bundle": 20
+        "ccc/star-rating-bundle": 20,
+        "emhar/search-doctrine-bundle": 20
     },
     "prefer-stable": true,
     "platform": {

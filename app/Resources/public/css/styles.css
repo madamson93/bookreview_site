@@ -11,4 +11,7 @@ body { padding-top: 70px; }
 
 button[type=submit] { width: 70px; float: left;  margin: 5px; }
 
+#reviews { margin-top: 40px; }
+
 button[type=reset] { width: 70px; float: left;  margin: 5px; }
+

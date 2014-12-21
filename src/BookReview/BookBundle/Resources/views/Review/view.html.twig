@@ -1,29 +1,29 @@
 {% extends "::base.html.twig" %}
 
 {% block body %}
-    <div class="reviews">
-        {% for review in reviews %}
-            <ul class="list-group">
-                <li class="list-group-item list-group-item-info">Reviewer: {{ review.username | lower }}</li>
-                <li class="list-group-item">Date Created: {{ review.datecreated | date }}</li>
+    <div id="reviews">
+    {% for review in reviews %}
+        <ul class="list-group">
+           <li class="list-group-item list-group-item-info">Reviewer: {{ review.username | lower }}</li>
+           <li class="list-group-item">Date Created: {{ review.datecreated | date }}</li>
 
-                {% if app.user is empty %}
-                    <li class="list-group-item">Review: {{ review.review | capitalize }}</li>
-                {% elseif app.user.username == review.username %}
-                    <a href="{{ path('bookreview_reviews_edit',{id: review.id}) }}" class="list-group-item" data-toggle="tooltip" data-placement="left" title="Click to edit review">
-                        Review: {{ review.review | capitalize }}
-                    </a>
-                {% else %}
-                    <li class="list-group-item">Review: {{ review.review | capitalize }}</li>
-                {% endif %}
-                {% if review.rating %}
-                        <div class="well">
-                            {{ review.rating | star_rating }}
-                        </div>
-                {% endif %}
-            </ul>
-        {% else %}
-            <p>There are no reviews on this book yet</p>
-        {% endfor %}
+           {% if app.user is empty %}
+               <li class="list-group-item">Review: {{ review.review | capitalize }}</li>
+            {% elseif app.user.username == review.username %}
+                <a href="{{ path('bookreview_reviews_edit',{id: review.id}) }}" class="list-group-item" data-toggle="tooltip" data-placement="left" title="Click to edit review">
+                    Review: {{ review.review | capitalize }}
+                </a>
+            {% else %}
+                <li class="list-group-item">Review: {{ review.review | capitalize }}</li>
+            {% endif %}
+            {% if review.rating %}
+                <div class="well">
+                   {{ review.rating | star_rating }}
+                </div>
+            {% endif %}
+        </ul>
+    {% else %}
+        <p>There are no reviews on this book yet</p>
+    {% endfor %}
     </div>
 {% endblock %}

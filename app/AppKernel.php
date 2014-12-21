@@ -23,6 +23,7 @@ class AppKernel extends Kernel
             new Iphp\FileStoreBundle\IphpFileStoreBundle(),
             new Liip\ImagineBundle\LiipImagineBundle(),
             new CCC\StarRatingBundle\CCCStarRatingBundle(),
+            new Emhar\SearchDoctrineBundle\EmharSearchDoctrineBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

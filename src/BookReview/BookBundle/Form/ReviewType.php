@@ -21,7 +21,6 @@ class ReviewType extends AbstractType
                 'expanded' => true,  // radio or checkbox...
                 'multiple' => false  // ...but not checkbox
             ))
-            ->add('submit', 'submit')
         ;
     }
     

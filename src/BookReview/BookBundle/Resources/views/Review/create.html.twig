@@ -1,8 +1,12 @@
 {% extends "BookReviewBookBundle::layout.html.twig" %}
 
-{% block title %}Add new book review{% endblock %}
+{% block title %}Add new review{% endblock %}
 
 {% block body %}
     <h1>Write a review for {{ title }}</h1>
-    {{ form(form) }}
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+        <button type="reset" class="btn btn-default pull-right">Clear</button>
+        <button type="submit" class="btn btn-success pull-right">Submit</button>
+    {{ form_end(form) }}
 {% endblock %}

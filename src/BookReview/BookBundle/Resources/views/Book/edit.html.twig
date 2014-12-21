@@ -1,11 +1,15 @@
 {% extends "BookReviewBookBundle::layout.html.twig" %}
 
-{% block title %}Edit a book{% endblock %}
+{% block title %}Edit book{% endblock %}
 
 {% block body %}
     <div>
-        <h1>Edit a book</h1>
-        {{ form(form) }}
-        <button type="button" class="btn btn-link"><a href="{{ path('bookreview_books_delete',{id: book.id}) }}">Delete book</a></button>
+        <h1>Edit book</h1>
+        {{ form_start(form) }}
+        {{ form_widget(form) }}
+          <button type="reset" class="btn btn-default pull-right">Clear</button>
+          <button type="submit" class="btn btn-success pull-right">Submit</button>
+          <button type="button" class="btn btn-danger pull-right"><a href="{{ path('bookreview_books_delete',{id: book.id}) }}">Delete</a></button>
+        {{ form_end(form) }}
     </div>
 {% endblock %}

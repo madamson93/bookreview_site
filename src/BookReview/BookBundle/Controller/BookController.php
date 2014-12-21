@@ -4,6 +4,7 @@ namespace BookReview\BookBundle\Controller;
 
 use BookReview\BookBundle\Entity\Book;
 use BookReview\BookBundle\Form\BookType;
+use BookReview\BookBundle\Search\SearchItem;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
@@ -99,11 +100,20 @@ class BookController extends Controller
 
     }
 
-    public function newAction(){
+    public function newAction(Request $request){
+        $searchService = $this->get('emhar_search_doctrine.search_service');
+        $form = $searchService->getForm(SearchItem::getClass(), $this->generateUrl('bookreview_books_search'));
 
+        $form->handleRequest($request);
 
-        return $this->render('BookReviewBookBundle:Book:view.html.twig', array(
-            // ...
+        if ($form->isValid())
+        {
+            $items = $searchService->getResults(SearchItem::getClass(), $form);
+            $pageCount = $searchService->getPageCount(SearchItem::getClass(), $form);
+        }
+
+        return $this->render('BookReviewBookBundle:Book:search.html.twig', array(
+            'form' => $form->createView()
         ));
     }
 

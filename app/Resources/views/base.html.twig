@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% block title %}Home{% endblock %} - Book Reviews</title>
     {% block stylesheets %}
-        {% stylesheets 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css' '../app/Resources/public/css/main.css'
+        {% stylesheets 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css' '../app/Resources/public/css/styles.css'
         '@CCCStarRatingBundle/Resources/rating.css' %}
         <link href="{{ asset_url }}" type="text/css" rel="stylesheet"/>
         {% endstylesheets %}
@@ -56,12 +56,10 @@
         </section>
         <section class="col-md-8">
             {% block body %}{% endblock %}
-            {% block content %}{% endblock %}
         </section>
+            {% block reviews %}{% endblock %}
     </div>
-    <div class="row">
-        {% block reviews %}{% endblock %}
-    </div>
+
 </div>
 </body>
 </html>
