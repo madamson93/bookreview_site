@@ -4,9 +4,9 @@ namespace BookReview\BookBundle\Controller;
 
 use BookReview\BookBundle\Entity\Book;
 use BookReview\BookBundle\Form\BookType;
-use BookReview\BookBundle\Search\SearchItem;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+use BookReview\BookBundle\Search\SearchItem;
 
 class BookController extends Controller
 {
@@ -100,9 +100,10 @@ class BookController extends Controller
 
     }
 
-    public function newAction(Request $request){
+    public function searchAction(Request $request){
+
         $searchService = $this->get('emhar_search_doctrine.search_service');
-        $form = $searchService->getForm(SearchItem::getClass(), $this->generateUrl('bookreview_books_search'));
+        $form = $searchService->getForm(SearchItem::getClass(), $this->generateUrl('bookreview_search'));
 
         $form->handleRequest($request);
 
@@ -110,11 +111,27 @@ class BookController extends Controller
         {
             $items = $searchService->getResults(SearchItem::getClass(), $form);
             $pageCount = $searchService->getPageCount(SearchItem::getClass(), $form);
+
+            return $this->render('BookReviewBookBundle:Search:results.html.twig', array(
+                'form' => $form->createView(),
+                'items' => $items,
+                'pageCount' => $pageCount
+            ));
+
         }
 
-        return $this->render('BookReviewBookBundle:Book:search.html.twig', array(
+        return $this->render('BookReviewBookBundle:Search:form.html.twig', array(
             'form' => $form->createView()
         ));
+
+    }
+
+    public function resultsAction($form, $items, $pageCount){
+
+        return $this->render('BookReviewBookBundle:Search:results.html.twig', array(
+            'form' => $form->createView()
+        ));
+
     }
 
 }

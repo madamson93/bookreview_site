@@ -1,0 +1,9 @@
+{% extends 'BookReviewBookBundle::layout.html.twig' %}
+
+{% block title %}Search results {% endblock %}
+
+{% block body %}
+    {{ form(form) }}
+
+    {{ dump(items) }}
+{% endblock %}
