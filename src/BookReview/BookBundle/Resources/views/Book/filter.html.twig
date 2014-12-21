@@ -3,7 +3,9 @@
 {% block title %}Books by genre{% endblock %}
 
 {% block body %}
-    {% for book in books %}
+     {% for book in books %}
+        <h1>{{ book.genre }}</h1>
+
         <div class="media">
             <span class="media-left media-middle">
                 {% if book.photo %}

@@ -37,9 +37,9 @@ bookreview_books_delete:
     requirements:
         id: \d+
 
-bookreview_books_search:
-    path: /books/search/{query}
-    defaults: { _controller: BookReviewBookBundle:Book:search }
+bookreview_books_filter:
+    path: /books/filter/{query}
+    defaults: { _controller: BookReviewBookBundle:Book:filter }
 
 bookreview_reviews_create:
     path:     /review/{book_id}
