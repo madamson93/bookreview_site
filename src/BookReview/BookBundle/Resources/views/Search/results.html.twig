@@ -1,9 +1,31 @@
 {% extends 'BookReviewBookBundle::layout.html.twig' %}
 
-{% block title %}Search results {% endblock %}
+{% block title %}Book Search{% endblock %}
 
 {% block body %}
     {{ form(form) }}
 
-    {{ dump(items) }}
+    <div class="search-results">
+        <h2>Search results</h2>
+        {% for item in items %}
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        <a href="{{ path('bookreview_books_view',{id: item.id}) }}">
+                            {{ item.title }}
+                        </a>
+                    </h3>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li>Author: {{ item.author }}</li>
+                        <li>Genre: {{ item.genre }}</li>
+                        <li>Publisher: {{ item.publisher }}</li>
+                    </ul>
+                </div>
+            </div>
+        {% else %}
+            <p>No results were found.</p>
+        {% endfor %}
+    </div>
 {% endblock %}

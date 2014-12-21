@@ -3,7 +3,7 @@
     <h2>Site Links</h2>
     <ul class="nav nav-pills nav-stacked">
         <li><a href="{{ path('bookreview_books_create') }}">Add new book</a></li>
-        <li><a href="{{ path('bookreview_search') }}">Book search</a></li>
+        <li><a href="{{ path('bookreview_search') }}">Search for books</a></li>
     </ul>
 
     <h2>Book Genres</h2>
@@ -13,5 +13,6 @@
         <li><a href="{{ path('bookreview_books_filter', {query: 'Memoir'}) }}">Memoir</a></li>
         <li><a href="{{ path('bookreview_books_filter', {query: 'American'}) }}">American</a></li>
         <li><a href="{{ path('bookreview_books_filter', {query: 'Historical Fiction'}) }}">Historical Fiction</a></li>
+        <li><a href="{{ path('bookreview_books_filter', {query: 'Comedy'}) }}">Comedy</a></li>
     </ul>
 {% endblock %}
