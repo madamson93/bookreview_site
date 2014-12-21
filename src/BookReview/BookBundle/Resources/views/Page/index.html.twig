@@ -7,7 +7,7 @@
         <p><a class="btn btn-success btn-lg" href="{{ path('bookreview_about') }}" role="button">Read more</a></p>
     </div>
 
-    {% for book in books %}
+    {% for book in pagination %}
         <div class="media">
             <span class="media-left media-middle">
                 {% if book.photo %}
@@ -30,7 +30,9 @@
                 </ul>
             </div>
         </div>
-    {% else %}
-        <p>There are no books in the system</p>
     {% endfor %}
+    {# display navigation #}
+    <div class="navigation">
+        {{ knp_pagination_render(pagination) }}
+    </div>
 {% endblock %}

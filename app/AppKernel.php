@@ -24,6 +24,7 @@ class AppKernel extends Kernel
             new Liip\ImagineBundle\LiipImagineBundle(),
             new CCC\StarRatingBundle\CCCStarRatingBundle(),
             new Emhar\SearchDoctrineBundle\EmharSearchDoctrineBundle(),
+            new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
