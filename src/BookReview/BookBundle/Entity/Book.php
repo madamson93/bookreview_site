@@ -52,7 +52,7 @@ class Book
     /**
      * @var string
      *
-     * @ORM\Column(name="summary", type="string", length=255)
+     * @ORM\Column(name="summary", type="text")
      */
     private $summary;
 

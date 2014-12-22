@@ -3,7 +3,7 @@
 {% block title %}Books by genre{% endblock %}
 
 {% block body %}
-     {% for book in books %}
+     {% for book in pagination %}
         <h1>{{ book.genre }}</h1>
 
         <div class="media">
@@ -22,13 +22,18 @@
                 <a href="{{ path('bookreview_books_view',{id : book.id}) }}"><h4 class="media-heading">{{ book.title | title }}</h4></a>
                 <ul>
                     <li>Author: {{ book.author | title }}</li>
-                    <li>Genre: {{ book.genre | capitalize }}</li>
+                    <li>Genre: {{ book.genre | title }}</li>
                     <li>Publisher: {{ book.publisher | title }}</li>
                     <li>Summary: {{ book.summary | capitalize }}</li>
                     <li>Number of reviews: {{ book.reviews | length }}</li>
                 </ul>
             </div>
         </div>
+
+         {# display navigation #}
+         <div class="navigation">
+             {{ knp_pagination_render(pagination) }}
+         </div>
     {% else %}
         <p>No books in this genre yet! Feel free to add one</p>
     {% endfor %}

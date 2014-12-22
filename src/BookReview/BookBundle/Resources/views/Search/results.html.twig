@@ -3,24 +3,28 @@
 {% block title %}Book Search{% endblock %}
 
 {% block body %}
+    <div class="page-header">
+        <h1>Search <small>by title, author, genre or publisher</small></h1>
+    </div>
+
     {{ form(form) }}
 
     <div class="search-results">
         <h2>Search results</h2>
         {% for item in items %}
-            <div class="panel panel-default">
+            <div class="panel panel-success">
                 <div class="panel-heading">
                     <h3 class="panel-title">
                         <a href="{{ path('bookreview_books_view',{id: item.id}) }}">
-                            {{ item.title }}
+                            {{ item.title | title }}
                         </a>
                     </h3>
                 </div>
                 <div class="panel-body">
                     <ul>
-                        <li>Author: {{ item.author }}</li>
-                        <li>Genre: {{ item.genre }}</li>
-                        <li>Publisher: {{ item.publisher }}</li>
+                        <li>Author: {{ item.author | title }}</li>
+                        <li>Genre: {{ item.genre | title }}</li>
+                        <li>Publisher: {{ item.publisher | title }}</li>
                     </ul>
                 </div>
             </div>

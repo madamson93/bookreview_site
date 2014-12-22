@@ -12,23 +12,13 @@ use Doctrine\ORM\EntityRepository;
  */
 class BookRepository extends EntityRepository
 {
-//    public function getBooks($limit, $offset){
-//        $queryBuilder = $this->createQueryBuilder('book');
-//        $queryBuilder->setFirstResult($offset)
-//                     ->setMaxResults($limit);
-//
-//        $query = $queryBuilder->getQuery();
-//
-//        return $query->getResult();
-//    }
-
     public function findBookByGenre($query){
+
         $qb = $this->createQueryBuilder('book')
             ->select('book')
             ->where('book.genre = :query')
             ->setParameter('query', $query);
 
-         $qb->getQuery()
-            ->getResult();
+         return $qb->getQuery()->getResult();
     }
 }

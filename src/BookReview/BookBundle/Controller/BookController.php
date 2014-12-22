@@ -89,13 +89,18 @@ class BookController extends Controller
 
     public function filterAction($query)
     {
-        $em = $this->container->get('doctrine.orm.entity_manager');
+        $repository = $this->getDoctrine()->getRepository('BookReviewBookBundle:Book');
+        $books = $repository->findBookByGenre($query);
 
-        $books = $em->getRepository('BookReviewBookBundle:Book')
-                    ->findBookByGenre($query);
+        $paginator  = $this->get('knp_paginator');
+        $pagination = $paginator->paginate(
+            $books,
+            $this->get('request')->query->get('page', 1),
+            10
+        );
 
         return $this->render('BookReviewBookBundle:Book:filter.html.twig', array(
-            'books' => $books
+            'pagination' => $pagination
         ));
 
     }
