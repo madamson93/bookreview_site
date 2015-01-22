@@ -4,7 +4,7 @@
     <div id="reviews">
     {% for review in reviews %}
         <ul class="list-group">
-           <li class="list-group-item list-group-item-warningx">Reviewer: {{ review.username | lower }}</li>
+           <li class="list-group-item list-group-item-warning">Reviewer: {{ review.username | lower }}</li>
            <li class="list-group-item">Date Created: {{ review.datecreated | date }}</li>
 
            {% if app.user is empty %}
