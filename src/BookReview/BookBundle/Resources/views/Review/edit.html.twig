@@ -8,5 +8,6 @@
         {{ form_widget(form) }}
            <button type="reset" class="btn btn-default pull-right">Clear</button>
            <button type="submit" class="btn btn-success pull-right">Submit</button>
+           <button type="button" class="btn btn-danger pull-right"><a href="{{ path('bookreview_reviews_delete',{id: review.id}) }}">Delete</a></button>
         {{ form_end(form) }}
 {% endblock %}

@@ -53,6 +53,12 @@ bookreview_reviews_edit:
     requirements:
         id: \d+
 
+bookreview_reviews_delete:
+    path:     /review/delete/{id}
+    defaults: { _controller: BookReviewBookBundle:Review:delete }
+    requirements:
+        id: \d+
+
 
 
 

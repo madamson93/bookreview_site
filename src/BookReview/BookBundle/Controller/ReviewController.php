@@ -74,4 +74,15 @@ class ReviewController extends Controller
         ));
     }
 
+    public function deleteAction($id)
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $review = $em->getRepository('BookReviewBookBundle:Review')->find($id);
+
+        $this->get("book_review_book.data")->deleteData($review);
+
+        return $this->redirect($this->generateUrl('bookreview_home'));
+    }
+
 }
