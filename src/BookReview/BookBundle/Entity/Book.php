@@ -5,10 +5,13 @@ namespace BookReview\BookBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use Iphp\FileStoreBundle\Mapping\Annotation as FileStore;
 use Symfony\Component\Validator\Constraints as Assert;
+use JMS\Serializer\Annotation\ExclusionPolicy;
+use JMS\Serializer\Annotation\Expose;
 /**
  * @ORM\Table(name="assignment_books")
  * @ORM\Entity(repositoryClass="BookReview\BookBundle\Entity\BookRepository")
  * @FileStore\Uploadable
+ * @ExclusionPolicy("all")
  */
 class Book
 {
@@ -18,6 +21,7 @@ class Book
      * @ORM\Column(name="id", type="integer")
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
+	 * @Expose
      */
     private $id;
 
@@ -25,6 +29,7 @@ class Book
      * @var string
      *
      * @ORM\Column(name="title", type="string", length=255)
+	 * @Expose
      */
     private $title;
 
@@ -32,6 +37,7 @@ class Book
      * @var string
      *
      * @ORM\Column(name="author", type="string", length=255)
+	 * @Expose
      */
     private $author;
 
@@ -39,6 +45,7 @@ class Book
      * @var string
      *
      * @ORM\Column(name="genre", type="string", length=255)
+	 * @Expose
      */
     private $genre;
 
@@ -46,6 +53,7 @@ class Book
      * @var string
      *
      * @ORM\Column(name="publisher", type="string", length=255)
+	 * @Expose
      */
     private $publisher;
 
