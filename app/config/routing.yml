@@ -1,3 +1,8 @@
+book_api:
+    type:     rest
+    resource: "@BookReviewAPIBundle/Resources/config/routing.yml"
+    prefix:   /api/v1
+
 book_review_user:
     resource: "@BookReviewUserBundle/Resources/config/routing.yml"
     prefix:   /

@@ -22,9 +22,11 @@ class AppKernel extends Kernel
             new FOS\UserBundle\FOSUserBundle(),
             new Iphp\FileStoreBundle\IphpFileStoreBundle(),
             new Liip\ImagineBundle\LiipImagineBundle(),
-            new CCC\StarRatingBundle\CCCStarRatingBundle(),
             new Emhar\SearchDoctrineBundle\EmharSearchDoctrineBundle(),
             new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
+			new FOS\RestBundle\FOSRestBundle(),
+			new JMS\SerializerBundle\JMSSerializerBundle(),
+            new BookReview\APIBundle\BookReviewAPIBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

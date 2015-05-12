@@ -1,0 +1,5 @@
+api_book:
+    type: rest
+    resource: @BookReviewAPIBundle/Controller/BookController.php
+    name_prefix: api_book_
+    prefix: /
