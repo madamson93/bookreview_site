@@ -30,7 +30,8 @@ class ReviewType extends AbstractType
     public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'BookReview\BookBundle\Entity\Review'
+            'data_class' => 'BookReview\BookBundle\Entity\Review',
+			'csrf_protection' => false
         ));
     }
 

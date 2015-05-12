@@ -3,3 +3,9 @@ api_book:
     resource: @BookReviewAPIBundle/Controller/BookController.php
     name_prefix: api_book_
     prefix: /
+
+api_review:
+    type: rest
+    resource: @BookReviewAPIBundle/Controller/ReviewController.php
+    name_prefix: api_review_
+    parent: api_book

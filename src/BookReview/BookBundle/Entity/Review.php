@@ -36,7 +36,6 @@ class Review
      * @var \BookReview\BookBundle\Entity\Book
      * @ORM\ManyToOne(targetEntity="BookReview\BookBundle\Entity\Book", inversedBy="reviews")
      * @ORM\JoinColumn(name="book_id", referencedColumnName="id")
-	 * @Expose
      */
     private $book;
 

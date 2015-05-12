@@ -23,4 +23,17 @@ class ReviewRepository extends EntityRepository
         return $qb->getQuery()
             ->getResult();
     }
+
+	public function getReviewforBook($bookId, $reviewId){
+
+		$qb = $this->createQueryBuilder('review')
+			->select('review')
+			->where('review.book = :book_id')
+			->andWhere('review.id = :review_id')
+			->setParameter('book_id', $bookId)
+			->setParameter('review_id', $reviewId);
+
+		return $qb->getQuery()
+			->getResult();
+	}
 }
