@@ -7,6 +7,7 @@ use BookReview\BookBundle\Form\BookType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use BookReview\BookBundle\Search\SearchItem;
+use GuzzleHttp\Client;
 
 class BookController extends Controller
 {
@@ -18,10 +19,9 @@ class BookController extends Controller
         $reviews = $em->getRepository('BookReviewBookBundle:Review')
                       ->getReviewsforBook($book->getId());
 
-
         return $this->render('BookReviewBookBundle:Book:view.html.twig', array(
             'book' => $book,
-            'reviews' => $reviews,
+            'reviews' => $reviews
         ));
 
 
@@ -39,6 +39,34 @@ class BookController extends Controller
 
         if($form->isValid()){
 
+			$form_title = $form->get('title')->getData();
+
+			$client = new Client();
+			$request = $client->createRequest('GET', 'https://www.googleapis.com/books/v1/volumes');
+
+			$query = $request->getQuery();
+			$query->set('q', $form_title);
+			$query->set('maxResults', '1');
+
+			$response = $client->send($request)->json();
+			$book_info = $response['items'][0]['volumeInfo'];
+
+			$pageCount = $book_info['pageCount'];
+			$publishedDate = $book_info['publishedDate'];
+			$isbn = $book_info['industryIdentifiers'][0];
+
+			if ($pageCount){
+				$book->setPageCount($pageCount);
+			};
+
+			if ($publishedDate){
+				$book->setPublishedDate($publishedDate);
+			}
+
+			if ($isbn){
+				$book->setIsbn($isbn);
+			}
+
             //uses custom service to persist data
             $this->get("book_review_book.data")->saveData($book);
 
@@ -48,7 +76,7 @@ class BookController extends Controller
         }
 
         return $this->render('BookReviewBookBundle:Book:create.html.twig', array(
-            'form' => $form->createView()
+            'form' => $form->createView(),
         ));
 
     }

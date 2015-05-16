@@ -61,6 +61,7 @@ class Book
      * @var string
      *
      * @ORM\Column(name="summary", type="text")
+	 * @Expose
      */
     private $summary;
 
@@ -76,6 +77,66 @@ class Book
      * @FileStore\UploadableField(mapping="book_image")
      **/
     private $photo;
+
+
+	/**
+	 * @var integer
+	 *
+	 * @ORM\Column(name="pageCount", type="integer")
+	 * @Expose
+	 */
+	private $pageCount;
+
+
+	/**
+	 * @var integer
+	 *
+	 * @ORM\Column(name="publishedDate", type="integer")
+	 */
+	private $publishedDate;
+
+
+	/**
+	 * @var string
+	 *
+	 * @ORM\Column(name="isbn", type="string", length=255)
+	 */
+	private $isbn;
+
+	/**
+	 * @return string
+	 */
+	public function getIsbn()
+	{
+		return $this->isbn;
+	}
+
+	/**
+	 * @param string $isbn
+	 */
+	public function setIsbn($isbn)
+	{
+		$this->isbn = $isbn;
+	}
+
+	/**
+	 * @return int
+	 */
+	public function getPublishedDate()
+	{
+		return $this->publishedDate;
+	}
+
+	/**
+	 * @param int $publishedDate
+	 */
+	public function setPublishedDate($publishedDate)
+	{
+		$this->publishedDate = $publishedDate;
+	}
+
+
+
 
     /**
      * Get id
@@ -257,4 +318,20 @@ class Book
     {
         $this->photo = $photo;
     }
+
+	/**
+	 * @return string
+	 */
+	public function getPageCount()
+	{
+		return $this->pageCount;
+	}
+
+	/**
+	 * @param string $pageCount
+	 */
+	public function setPageCount($pageCount)
+	{
+		$this->pageCount = $pageCount;
+	}
 }
