@@ -135,20 +135,32 @@ class BookController extends Controller
 
     public function searchAction(Request $request){
 
-        $searchService = $this->get('emhar_search_doctrine.search_service');
-        $form = $searchService->getForm(SearchItem::getClass(), $this->generateUrl('bookreview_search'));
+		$defaultData = array('message' => 'Type your search term');
+		$form = $this->createFormBuilder($defaultData)
+			->add('Search_term', 'text')
+			->getForm();
 
         $form->handleRequest($request);
 
+
+
         if ($form->isValid())
         {
-            $items = $searchService->getResults(SearchItem::getClass(), $form);
-            $pageCount = $searchService->getPageCount(SearchItem::getClass(), $form);
+			$search_term = $form->get('Search_term')->getData();
 
-            return $this->render('BookReviewBookBundle:Search:results.html.twig', array(
+			$client = new Client();
+			$request = $client->createRequest('GET', 'https://www.googleapis.com/books/v1/volumes');
+
+			$query = $request->getQuery();
+			$query->set('q', $search_term);
+
+			$response = $client->send($request)->json();
+
+			$items = $response['items'];
+
+            return $this->render('BookReviewBookBundle:Search:form.html.twig', array(
                 'form' => $form->createView(),
-                'items' => $items,
-                'pageCount' => $pageCount
+				'items' => $items
             ));
 
         }
@@ -159,12 +171,25 @@ class BookController extends Controller
 
     }
 
-    public function resultsAction($form, $items, $pageCount){
+	public function resultAction($item_title){
 
-        return $this->render('BookReviewBookBundle:Search:results.html.twig', array(
-            'form' => $form->createView()
-        ));
+		$search_term = $item_title;
 
-    }
+		$client = new Client();
+		$request = $client->createRequest('GET', 'https://www.googleapis.com/books/v1/volumes');
+
+		$query = $request->getQuery();
+		$query->set('q', $search_term);
+
+		$response = $client->send($request)->json();
+
+		$item = $response['items'][0];
+
+		return $this->render('BookReviewBookBundle:Search:results.html.twig', array(
+			'item' => $item
+		));
+
+	}
+
 
 }

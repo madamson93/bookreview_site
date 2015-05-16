@@ -89,9 +89,9 @@ class Book
 
 
 	/**
-	 * @var integer
+	 * @var string
 	 *
-	 * @ORM\Column(name="publishedDate", type="integer")
+	 * @ORM\Column(name="publishedDate", type="string", length=255)
 	 */
 	private $publishedDate;
 
@@ -120,7 +120,7 @@ class Book
 	}
 
 	/**
-	 * @return int
+	 * @return string
 	 */
 	public function getPublishedDate()
 	{
@@ -128,7 +128,7 @@ class Book
 	}
 
 	/**
-	 * @param int $publishedDate
+	 * @param string $publishedDate
 	 */
 	public function setPublishedDate($publishedDate)
 	{

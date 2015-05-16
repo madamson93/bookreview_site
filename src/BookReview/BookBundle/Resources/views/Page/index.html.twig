@@ -27,6 +27,15 @@
                     <li>Genre: {{ book.genre | title }}</li>
                     <li>Publisher: {{ book.publisher | title }}</li>
                     <li>Summary: {{ book.summary | capitalize }}</li>
+                    {% if book.pageCount %}
+                        <li>Page Count: {{ book.pageCount }}</li>
+                    {% endif %}
+                    {% if book.publishedDate %}
+                        <li>Year of Publication: {{ book.publishedDate }}</li>
+                    {% endif %}
+                    {% if book.isbn %}
+                        <li>ISBN-13: {{ book.isbn }} </li>
+                    {% endif %}
                 </ul>
             </div>
         </div>

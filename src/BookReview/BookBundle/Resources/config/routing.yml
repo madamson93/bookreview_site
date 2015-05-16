@@ -62,11 +62,10 @@ bookreview_reviews_delete:
 
 
 
-
 bookreview_search:
     path: /books/search
     defaults: { _controller: BookReviewBookBundle:Book:search }
 
-bookreview_search_results:
-    path: /books/search-results
-    defaults: { _controller: BookReviewBookBundle:Book:results }
+bookreview_search_result:
+    path: /books/search/{item_title}
+    defaults: { _controller: BookReviewBookBundle:Book:result }
