@@ -82,8 +82,8 @@ class Book
 	/**
 	 * @var integer
 	 *
-	 * @ORM\Column(name="pageCount", type="integer")
-	 * @Expose
+	 * @ORM\Column(name="pageCount", type="integer", nullable=true))
+	 *
 	 */
 	private $pageCount;
 
@@ -91,7 +91,7 @@ class Book
 	/**
 	 * @var string
 	 *
-	 * @ORM\Column(name="publishedDate", type="string", length=255)
+	 * @ORM\Column(name="publishedDate", type="string", length=255, nullable=true))
 	 */
 	private $publishedDate;
 
@@ -99,7 +99,8 @@ class Book
 	/**
 	 * @var string
 	 *
-	 * @ORM\Column(name="isbn", type="string", length=255)
+	 * @ORM\Column(name="isbn", type="string", length=255, nullable=true))
+	 * @Expose
 	 */
 	private $isbn;
 
