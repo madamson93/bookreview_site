@@ -74,7 +74,7 @@ class ReviewController extends FOSRestController {
 		//check that the POST data meets validations
 		if($form->isValid()) {
 			//populate review form fields with logged in user, book ID, new timestamp, persist and flush data
-			$review->setUsername($request->get("username"));
+			$review->setUsername("");
 			$review->setBook($book);
 			$review->setBookid($slug);
 			$review->setDatecreated(new \DateTime("Europe/London"));
