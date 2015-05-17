@@ -5,13 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% block title %}Home{% endblock %} - Book Reviews</title>
     {% block stylesheets %}
-        {% stylesheets 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css' '../app/Resources/public/css/styles.css' %}
+        {% stylesheets
+            'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css'
+            '../app/Resources/public/css/styles.css'
+        %}
         <link href="{{ asset_url }}" type="text/css" rel="stylesheet"/>
         {% endstylesheets %}
     {% endblock %}
     {% block javascript %}
-        {% javascripts 'https://code.jquery.com/jquery-2.1.1.js' 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js'
-        '../app/Resources/public/js/main.js' %}
+        {% javascripts
+            'https://code.jquery.com/jquery-2.1.1.js'
+            'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js'
+            '../app/Resources/public/js/main.js'
+            '../app/Resources/public/js/jquery-ui.js'
+        %}
         <script type="text/javascript" src="{{ asset_url }}"></script>
     {% endjavascripts %}
     {% endblock %}

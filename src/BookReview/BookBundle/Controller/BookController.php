@@ -142,8 +142,6 @@ class BookController extends Controller
 
         $form->handleRequest($request);
 
-
-
         if ($form->isValid())
         {
 			$search_term = $form->get('Search_term')->getData();
