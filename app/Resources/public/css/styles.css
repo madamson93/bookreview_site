@@ -28,7 +28,9 @@ button[type=reset] {
 }
 
 .ui-autocomplete {
-	background-color: #fff; width: 100px;
+	background-color: #fff;
+	border: 1px solid grey;
+	max-width: 750px;
 }
 
 .ui-state-focus {

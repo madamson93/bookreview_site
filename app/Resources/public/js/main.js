@@ -22,11 +22,16 @@ $(document).ready(function() {
                     success: function( data ) {
                         var bookTitles = [];
 
-                        for (i=0; i <data.items.length; i++){
-                            bookTitles[i] = data.items[i].volumeInfo.title;
-                        }
+                        try {
+                            for (i = 0; i < data.items.length; i++) {
+                                bookTitles[i] = data.items[i].volumeInfo.title;
+                            }
 
-                        response (bookTitles);
+                            response(bookTitles);
+
+                        } catch (e){
+                            alert("No books were found. Please try again!");
+                        }
                     },
                     error: function(){
                         alert("Suggestions could not be loaded. Please try again!");

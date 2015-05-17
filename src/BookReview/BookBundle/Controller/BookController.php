@@ -53,7 +53,7 @@ class BookController extends Controller
 
 			$pageCount = $book_info['pageCount'];
 			$publishedDate = $book_info['publishedDate'];
-			$isbn = $book_info['industryIdentifiers'][0];
+			$isbn = $book_info['industryIdentifiers'][0]['identifier'];
 
 			if ($pageCount){
 				$book->setPageCount($pageCount);
@@ -61,17 +61,17 @@ class BookController extends Controller
 
 			if ($publishedDate){
 				$book->setPublishedDate($publishedDate);
-			}
+			};
 
 			if ($isbn){
 				$book->setIsbn($isbn);
-			}
+			};
 
             //uses custom service to persist data
             $this->get("book_review_book.data")->saveData($book);
 
             return $this->redirect($this->generateUrl('bookreview_books_view', array(
-                'id' => $book->getId()
+                'id' => $book->getId(),
             )));
         }
 

@@ -21,15 +21,15 @@
                 <li>Author: {{ book.author | title }}</li>
                 <li>Genre: {{ book.genre | title }}</li>
                 <li>Publisher: {{ book.publisher | title }}</li>
-                <li>Summary: {{ book.summary | capitalize }}</li>
+                <li>Summary: {{ book.summary | raw }}</li>
                 <li>Number of reviews: {{ book.reviews | length }}</li>
-                {% if book.pageCount %}
+                {% if book.pageCount|default %}
                     <li>Page Count: {{ book.pageCount }}</li>
                 {% endif %}
-                {% if book.publishedDate %}
+                {% if book.publishedDate|default %}
                     <li>Year of Publication: {{ book.publishedDate }}</li>
                 {% endif %}
-                {% if book.isbn %}
+                {% if book.isbn|default %}
                     <li>ISBN-13: {{ book.isbn }} </li>
                 {% endif %}
             </ul>
