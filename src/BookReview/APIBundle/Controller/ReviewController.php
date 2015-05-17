@@ -13,11 +13,6 @@ use Symfony\Component\Validator\Constraints\DateTime;
 
 class ReviewController extends FOSRestController {
 
-	/*
-	 * Put a review for a book
-	 * Delete a review for a book
-	 */
-
 	public function getReviewsAction($slug){
 
 		$em = $this->getDoctrine()->getManager();
@@ -58,7 +53,7 @@ class ReviewController extends FOSRestController {
 
 	}
 
-	public function newReviewsAction($slug, Request $request){
+	public function postReviewsAction($slug, Request $request){
 
 		//find the book which is going to have a new review
 		$em = $this->getDoctrine()->getManager();
@@ -79,7 +74,7 @@ class ReviewController extends FOSRestController {
 		//check that the POST data meets validations
 		if($form->isValid()) {
 			//populate review form fields with logged in user, book ID, new timestamp, persist and flush data
-			$review->setUsername("");
+			$review->setUsername($request->get("username"));
 			$review->setBook($book);
 			$review->setBookid($slug);
 			$review->setDatecreated(new \DateTime("Europe/London"));
@@ -129,7 +124,7 @@ class ReviewController extends FOSRestController {
 
 		if($form->isValid()){
 			//if the form is valid then persist the updated data
-			$review->setUsername("Test");
+			$review->setUsername($request->get("username"));
 			$review->setDatecreated(new \DateTime("Europe/London"));
 			$em->persist($review);
 	 		$em->flush();
