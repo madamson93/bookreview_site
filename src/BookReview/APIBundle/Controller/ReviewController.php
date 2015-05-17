@@ -126,7 +126,6 @@ class ReviewController extends FOSRestController {
 			//if the form is valid then persist the updated data
 			$review->setUsername($request->get("username"));
 			$review->setDatecreated(new \DateTime("Europe/London"));
-			$em->persist($review);
 	 		$em->flush();
 
 			return $this->handleView($this->view(null, 204));

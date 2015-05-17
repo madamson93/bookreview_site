@@ -28,8 +28,8 @@
       <file leaf-file-name="Book.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/BookReview/BookBundle/Entity/Book.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.99147123" vertical-offset="1050" max-vertical-offset="5160">
-              <caret line="101" column="73" selection-start-line="101" selection-start-column="73" selection-end-line="101" selection-end-column="73" />
+            <state vertical-scroll-proportion="0.6185567" vertical-offset="1095" max-vertical-offset="5160">
+              <caret line="101" column="29" selection-start-line="101" selection-start-column="25" selection-end-line="101" selection-end-column="29" />
               <folding>
                 <element signature="e#48#80#0#PHP" expanded="true" />
               </folding>
@@ -52,38 +52,13 @@
       <file leaf-file-name="BookController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/BookReview/APIBundle/Controller/BookController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="870">
+            <state vertical-scroll-proportion="0.0" vertical-offset="116" max-vertical-offset="825">
               <caret line="101" column="0" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
               <folding>
                 <element signature="e#279#482#0#PHP" expanded="false" />
                 <element signature="e#485#957#0#PHP" expanded="false" />
-                <element signature="e#1976#2889#0#PHP" expanded="false" />
+                <element signature="e#960#1973#0#PHP" expanded="false" />
                 <element signature="e#2892#3263#0#PHP" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BookController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/BookReview/BookBundle/Controller/BookController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="2910">
-              <caret line="62" column="56" selection-start-line="62" selection-start-column="56" selection-end-line="62" selection-end-column="56" />
-              <folding>
-                <element signature="e#474#501#1#PHP" expanded="true" />
-                <element signature="e#554#583#1#PHP" expanded="true" />
-                <element signature="e#1977#2000#0#PHP" expanded="true" />
-                <element signature="e#2106#2150#0#PHP" expanded="true" />
-                <element signature="e#2367#2394#1#PHP" expanded="true" />
-                <element signature="e#2678#2701#0#PHP" expanded="true" />
-                <element signature="e#2806#2848#0#PHP" expanded="true" />
-                <element signature="e#3077#3104#1#PHP" expanded="true" />
-                <element signature="e#3234#3251#1#PHP" expanded="true" />
-                <element signature="e#3367#3394#1#PHP" expanded="true" />
-                <element signature="e#3682#3726#0#PHP" expanded="true" />
-                <element signature="e#4451#4495#0#PHP" expanded="true" />
-                <element signature="e#4630#4674#0#PHP" expanded="true" />
-                <element signature="e#5112#5159#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -93,13 +68,13 @@
         <entry file="file://$PROJECT_DIR$/src/BookReview/APIBundle/Controller/ReviewController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
-              <caret line="55" column="63" selection-start-line="55" selection-start-column="63" selection-end-line="55" selection-end-column="63" />
+              <caret line="98" column="66" selection-start-line="98" selection-start-column="66" selection-end-line="98" selection-end-column="66" />
               <folding>
                 <element signature="e#419#1004#0#PHP" expanded="false" />
                 <element signature="e#1007#1600#0#PHP" expanded="false" />
                 <element signature="e#1603#3066#0#PHP" expanded="false" />
-                <element signature="e#3069#4324#0#PHP" expanded="false" />
-                <element signature="e#4327#4831#0#PHP" expanded="false" />
+                <element signature="e#3069#4298#0#PHP" expanded="false" />
+                <element signature="e#4301#4805#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -159,8 +134,8 @@
         <option value="$PROJECT_DIR$/app/Resources/public/js/main.js" />
         <option value="$PROJECT_DIR$/src/BookReview/BookBundle/Resources/views/Book/view.html.twig" />
         <option value="$PROJECT_DIR$/src/BookReview/BookBundle/Controller/BookController.php" />
-        <option value="$PROJECT_DIR$/src/BookReview/APIBundle/Controller/ReviewController.php" />
         <option value="$PROJECT_DIR$/src/BookReview/BookBundle/Entity/Book.php" />
+        <option value="$PROJECT_DIR$/src/BookReview/APIBundle/Controller/ReviewController.php" />
       </list>
     </option>
   </component>
@@ -380,10 +355,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="873" height="823" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2970297" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2970297" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24964234" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -778,20 +753,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/BookReview/APIBundle/Controller/ReviewController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
-          <caret line="55" column="63" selection-start-line="55" selection-start-column="63" selection-end-line="55" selection-end-column="63" />
-          <folding>
-            <element signature="e#419#1004#0#PHP" expanded="false" />
-            <element signature="e#1007#1600#0#PHP" expanded="false" />
-            <element signature="e#1603#3066#0#PHP" expanded="false" />
-            <element signature="e#3069#4324#0#PHP" expanded="false" />
-            <element signature="e#4327#4831#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/BookReview/BookBundle/Form/ReviewType.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4197349" vertical-offset="30" max-vertical-offset="765">
@@ -820,22 +781,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/BookReview/APIBundle/Controller/BookController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="870">
-          <caret line="101" column="0" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
-          <folding>
-            <element signature="e#279#482#0#PHP" expanded="false" />
-            <element signature="e#485#957#0#PHP" expanded="false" />
-            <element signature="e#1976#2889#0#PHP" expanded="false" />
-            <element signature="e#2892#3263#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/BookReview/BookBundle/Controller/BookController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="2910">
+        <state vertical-scroll-proportion="0.97201765" vertical-offset="195" max-vertical-offset="2910">
           <caret line="62" column="56" selection-start-line="62" selection-start-column="56" selection-end-line="62" selection-end-column="56" />
           <folding>
             <element signature="e#474#501#1#PHP" expanded="true" />
@@ -856,10 +804,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/BookReview/APIBundle/Controller/ReviewController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
+          <caret line="98" column="66" selection-start-line="98" selection-start-column="66" selection-end-line="98" selection-end-column="66" />
+          <folding>
+            <element signature="e#419#1004#0#PHP" expanded="false" />
+            <element signature="e#1007#1600#0#PHP" expanded="false" />
+            <element signature="e#1603#3066#0#PHP" expanded="false" />
+            <element signature="e#3069#4298#0#PHP" expanded="false" />
+            <element signature="e#4301#4805#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BookReview/APIBundle/Controller/BookController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="116" max-vertical-offset="825">
+          <caret line="101" column="0" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
+          <folding>
+            <element signature="e#279#482#0#PHP" expanded="false" />
+            <element signature="e#485#957#0#PHP" expanded="false" />
+            <element signature="e#960#1973#0#PHP" expanded="false" />
+            <element signature="e#2892#3263#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/BookReview/BookBundle/Entity/Book.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.99147123" vertical-offset="1050" max-vertical-offset="5160">
-          <caret line="101" column="73" selection-start-line="101" selection-start-column="73" selection-end-line="101" selection-end-column="73" />
+        <state vertical-scroll-proportion="0.6185567" vertical-offset="1095" max-vertical-offset="5160">
+          <caret line="101" column="29" selection-start-line="101" selection-start-column="25" selection-end-line="101" selection-end-column="29" />
           <folding>
             <element signature="e#48#80#0#PHP" expanded="true" />
           </folding>
